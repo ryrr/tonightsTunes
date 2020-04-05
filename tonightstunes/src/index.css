@@ -1,4 +1,52 @@
+.app{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.heading{
+    margin-bottom: 50px;
+}
+.title{
+    font-family: 'lingus';
+    font-size: 60pt;
+    color: #63585E;
+    text-align: center;
+    margin: 0px;
+    margin-top: 20px;
+}
+.subTitle{
+    color: #C0C8E2;
+    margin-top: 10px;
+    font-family: 'Gotu', sans-serif;
+    font-weight: bold;
+}
 .track{
-    border:solid red;
-    width: 25%;
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    color: #C0C8E2;
+    font-family: 'Gotu', sans-serif;
+}
+.albumArt{
+    width: 120px;
+    height: 100px;
+    border-radius: 10px;
+    background-color: #63585E;
+    margin-right: 50px;
+}
+.trackInfo{
+    width: 70%;
+}
+.trackName{
+    margin-top: 5px;
+}
+.trackName2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+@font-face {
+  font-family: lingus;
+  src: url(/fonts/Curvilingus.otf);
 }
