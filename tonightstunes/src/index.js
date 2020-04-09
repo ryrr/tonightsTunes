@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import './css/index.css';
 import './css/hover-min.css';
+import Autocomplete from "./Autocomplete";
 
 
 let App = (props) => {
@@ -37,25 +38,22 @@ let App = (props) => {
             })
         }
     }
-    if (!artists) {
-        return (
-            <div className='app'>
-                <Heading></Heading>
-                <button onClick={login}>connect to spotify</button>
-                <Track></Track>
+    return (
+        <div className='app'>
+            <Heading></Heading>
+            <button className='spotifyBttn' onClick={login}>connect to spotify</button>
+            <div className='locationDiv'>
+                <Autocomplete
+                    suggestions={
+                        {
+                            'N1173': 'New York',
+                            'N2393': 'New Yam'
+                        }
+                    }
+                />
             </div>
-        )
-    }
-    else {
-        return (
-            <div className='app'>
-                <Heading></Heading>
-                <button onClick={login}>connect to spotify</button>
-                <p>{artists['display_name']}</p>
-                <Track></Track>
-            </div>
-        )
-    }
+        </div>
+    )
 }
 
 let Heading = (props) => {
@@ -82,6 +80,8 @@ let Track = (props) => {
         </div>
     )
 }
+
+
 
 ReactDOM.render(
     <App />,

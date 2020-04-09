@@ -6,6 +6,7 @@
 }
 .heading{
     margin-bottom: 50px;
+    transform: rotate(-1deg);
 }
 .title{
     font-family: 'groovy';
@@ -20,6 +21,9 @@
     color: #C0C8E2;
     margin-top: 10px;
     font-family: 'Gotu', sans-serif;
+}
+.spotifyBttn{
+    display: none;
 }
 .track{
     width: 33%;
@@ -60,4 +64,57 @@
 @font-face {
   font-family: groovy;
   src: url(../fonts/Curvilingus.otf);
+}
+
+
+
+/*AUTOCOMPLETE*/
+input {
+  border: 1px solid #999;
+  padding: 0.5rem;
+  width: 100%;
+  height: 50px;
+  font-family: 'Roboto', sans-serif;
+  border-radius: 10px;
+  font-size: 20pt;
+  transform: rotate(2deg);
+  text-align: center;
+}
+
+
+.suggestions {
+  border-top-width: 0;
+  list-style: none;
+  margin-top: 0;
+  max-height: 143px;
+  overflow-y: auto;
+  padding-left: 0;
+  width: 105%;
+  font-family: 'Roboto', sans-serif;
+  border-radius: 10px;
+  transform: rotate(2deg);
+  font-size: 20pt;
+}
+
+.suggestions li {
+  padding: 0.5rem;
+}
+
+.suggestion-active,
+
+.suggestions li:hover {
+  background-color:#63585E;
+  color: #C0C8E2;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.suggestions li:not(:last-of-type) {
+
+}
+.suggestions::-webkit-scrollbar { 
+    display: none; 
+}
+textarea:focus, input:focus{
+    outline: none;
 }
