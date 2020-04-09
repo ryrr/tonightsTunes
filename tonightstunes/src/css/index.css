@@ -8,38 +8,49 @@
     margin-bottom: 50px;
 }
 .title{
-    font-family: 'lingus';
+    font-family: 'groovy';
     font-size: 60pt;
     color: #63585E;
     text-align: center;
     margin: 0px;
     margin-top: 20px;
+    letter-spacing: 10px;
 }
 .subTitle{
     color: #C0C8E2;
     margin-top: 10px;
     font-family: 'Gotu', sans-serif;
-    font-weight: bold;
 }
 .track{
-    width: 40%;
+    width: 33%;
+    border-radius: 20px;
     display: flex;
     flex-direction: row;
     color: #C0C8E2;
-    font-family: 'Gotu', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    border-bottom:solid #63585E;
+    background-color: #706372;
+    margin-bottom: 30px;
+    box-shadow:-5px 8px 6px -6px black ;
 }
 .albumArt{
     width: 120px;
     height: 100px;
     border-radius: 10px;
     background-color: #63585E;
-    margin-right: 50px;
+    margin-right: 30px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 15px;
 }
 .trackInfo{
-    width: 70%;
+    width: 100%;
 }
 .trackName{
-    margin-top: 5px;
+    margin-top: 35px;
+}
+.trackLength{
+    margin-right: 10px;
 }
 .trackName2{
     display: flex;
@@ -47,6 +58,6 @@
     justify-content: space-between;
 }
 @font-face {
-  font-family: lingus;
-  src: url(/fonts/Curvilingus.otf);
+  font-family: groovy;
+  src: url(../fonts/Curvilingus.otf);
 }
