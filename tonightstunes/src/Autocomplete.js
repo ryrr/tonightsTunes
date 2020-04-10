@@ -28,8 +28,6 @@ class Autocomplete extends Component {
     onChange = e => {
 
         let suggestions = Object.values(this.props.suggestions)
-
-
         // const suggestions = this.props.suggestions;
         const userInput = e.currentTarget.value;
 
@@ -55,6 +53,7 @@ class Autocomplete extends Component {
             userInput: e.currentTarget.innerText
         });
     };
+
 
     onKeyDown = e => {
         const { activeSuggestion, filteredSuggestions } = this.state;

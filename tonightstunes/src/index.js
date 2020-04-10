@@ -3,11 +3,14 @@ import ReactDOM from 'react-dom';
 import './css/index.css';
 import './css/hover-min.css';
 import Autocomplete from "./Autocomplete";
+import { StyleSheet, css } from 'aphrodite';
+import { bounceOutLeft } from 'react-animations';
+import classnames from 'classnames';
 
 
 let App = (props) => {
-
-    const [artists, setArtists] = useState()
+    const [artists, setArtists] = useState('')
+    const [animation, setAnimation] = useState('')
 
     useEffect(() => {
         let token = window.location.hash.substr(1).split('&')[0].split("=")[1]
@@ -38,23 +41,49 @@ let App = (props) => {
             })
         }
     }
+
+    let locationSubmit = (e) => {
+        e.preventDefault()
+        setAnimation('bounceOutLeft')
+        setTimeout(function () {
+            setAnimation('')
+        }, 900);
+    }
+    let shouldMove = () => {
+        if (animation !== '') { return true }
+        else { return false }
+    }
+    const classy = css(
+        shouldMove() ? styles.bounceOutLeft : styles.nothing
+    )
     return (
         <div className='app'>
             <Heading></Heading>
             <button className='spotifyBttn' onClick={login}>connect to spotify</button>
             <div className='locationDiv'>
-                <Autocomplete
-                    suggestions={
-                        {
-                            'N1173': 'New York',
-                            'N2393': 'New Yam'
+                <form onSubmit={locationSubmit} className={classy}>
+                    <Autocomplete
+                        className='locationForm'
+                        suggestions={
+                            {
+                                '7644': 'New York',
+                                'N2393': 'New Yam'
+                            }
                         }
-                    }
-                />
+                    />
+                </form>
             </div>
-        </div>
+        </div >
     )
 }
+
+const styles = StyleSheet.create({
+    nothing: {},
+    bounceOutLeft: {
+        animationName: bounceOutLeft,
+        animationDuration: '1s'
+    }
+})
 
 let Heading = (props) => {
     return (
