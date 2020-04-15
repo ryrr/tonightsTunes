@@ -5,13 +5,30 @@ import './css/hover-min.css';
 import Autocomplete from "./Autocomplete";
 import { StyleSheet, css } from 'aphrodite';
 import { bounceOutLeft } from 'react-animations';
-import classnames from 'classnames';
-
 
 let App = (props) => {
-    const [artists, setArtists] = useState('')
-    const [animation, setAnimation] = useState('')
+    return (
+        <div className='app'>
+            <Heading></Heading>
+            <SpotifyBttn></SpotifyBttn>
+            <LocationForm></LocationForm>
+        </div >
+    )
+}
 
+
+let Heading = (props) => {
+    return (
+        <div className='heading'>
+            <h1 className='title'>Whip</h1>
+            <h3 className='subTitle'>A playlist generator based on music near you</h3>
+        </div>
+
+    )
+}
+
+let SpotifyBttn = (props) => {
+    const [artists, setArtists] = useState('')
     useEffect(() => {
         let token = window.location.hash.substr(1).split('&')[0].split("=")[1]
         if (token) {
@@ -41,13 +58,23 @@ let App = (props) => {
             })
         }
     }
-
+    return (
+        <button className='spotifyBttn' onClick={login}>connect to spotify</button>
+    )
+}
+let LocationForm = (props) => {
+    const [animation, setAnimation] = useState('')
     let locationSubmit = (e) => {
         e.preventDefault()
         setAnimation('bounceOutLeft')
         setTimeout(function () {
             setAnimation('')
         }, 900);
+        fetch('http://localhost:5000/api/hello')
+            .then(res => {
+                console.log(res)
+
+            })
     }
     let shouldMove = () => {
         if (animation !== '') { return true }
@@ -57,23 +84,19 @@ let App = (props) => {
         shouldMove() ? styles.bounceOutLeft : styles.nothing
     )
     return (
-        <div className='app'>
-            <Heading></Heading>
-            <button className='spotifyBttn' onClick={login}>connect to spotify</button>
-            <div className='locationDiv'>
-                <form onSubmit={locationSubmit} className={classy}>
-                    <Autocomplete
-                        className='locationForm'
-                        suggestions={
-                            {
-                                '7644': 'New York',
-                                'N2393': 'New Yam'
-                            }
+        <div className='locationDiv'>
+            <form onSubmit={locationSubmit} className={classy}>
+                <Autocomplete
+                    className='locationForm'
+                    suggestions={
+                        {
+                            '7644': 'New York',
+                            'N2393': 'New Yam'
                         }
-                    />
-                </form>
-            </div>
-        </div >
+                    }
+                />
+            </form>
+        </div>
     )
 }
 
@@ -85,15 +108,6 @@ const styles = StyleSheet.create({
     }
 })
 
-let Heading = (props) => {
-    return (
-        <div className='heading'>
-            <h1 className='title'>Whip</h1>
-            <h3 className='subTitle'>A playlist generator based on music near you</h3>
-        </div>
-
-    )
-}
 let Track = (props) => {
     return (
         <div className='track'>

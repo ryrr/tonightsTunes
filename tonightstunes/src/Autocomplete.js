@@ -1,5 +1,7 @@
 import React, { Component, Fragment } from "react";
 import PropTypes from "prop-types";
+import { StyleSheet, css } from 'aphrodite';
+import { bounceOutLeft } from 'react-animations';
 
 class Autocomplete extends Component {
     static propTypes = {
@@ -53,7 +55,6 @@ class Autocomplete extends Component {
             userInput: e.currentTarget.innerText
         });
     };
-
 
     onKeyDown = e => {
         const { activeSuggestion, filteredSuggestions } = this.state;
