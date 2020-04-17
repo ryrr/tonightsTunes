@@ -109,6 +109,16 @@ input {
   font-weight: 700;
 }
 
+.trackContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.albumArt{
+    height: 50px;
+    width: 50px;
+}
+
 .suggestions li:not(:last-of-type) {
 
 }
