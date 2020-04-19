@@ -26,7 +26,7 @@
     display: none;
 }
 .track{
-    width: 33%;
+    width: 100%;
     border-radius: 20px;
     display: flex;
     flex-direction: row;
@@ -45,10 +45,27 @@
     margin-right: 30px;
     margin-bottom: 20px;
     margin-top: 20px;
-    margin-left: 15px;
+    margin-left: 25px;
 }
 .trackInfo{
-    width: 100%;
+    width: 75%;
+    bottom: solid red;
+}
+.eventInfo{
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15pt;
+    font-weight: bold;
+    color:black
+}
+.eventText{
+    line-height: 20px;
+}
+.eventHighlight{
+    color:  #C0C8E2;
+    font-size: 14pt;
 }
 .trackName{
     margin-top: 35px;
@@ -115,8 +132,11 @@ input {
     justify-content: center;
 }
 .albumArt{
-    height: 50px;
-    width: 50px;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .suggestions li:not(:last-of-type) {

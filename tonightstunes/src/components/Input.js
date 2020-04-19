@@ -8,6 +8,9 @@ let Input = (props) => {
     const [animation, setAnimation] = useState(null)
     const [v, setV] = useState(true)
     const [tracks, setTracks] = useState([]);
+    const [selectedTrack, setSelectedTrack] = useState(-1);
+    const testData = require('../util/testData.json')
+
     let locationSubmit = (e) => {
         e.preventDefault()
         setAnimation('bounceOutLeft')
@@ -21,7 +24,6 @@ let Input = (props) => {
     }
 
     let fetchTracks = (location) => {
-        console.log(location)
         const token = props.token;
         let data = {
             token: token,
@@ -32,24 +34,37 @@ let Input = (props) => {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)
         };
+        /*
         fetch('http://localhost:3001/nearby', requestOptions)
             .then(response => response.json())
             .then(data => processData(data));
-
+        */
+        //console.log(testData)
+        processData(testData)
     }
     const processData = data => {
-        console.log(data);
         let newTracks = []
         for (let obj of data.events) {
             if (obj.tracks) {
                 if (obj.tracks[0]) {
                     obj.tracks[0].duration = millisToMinutesAndSeconds(obj.tracks[0].duration)
-                    newTracks.push(obj.tracks[0])
+                    newTracks.push({ track: obj.tracks[0], event: obj.event })
                 }
             }
         }
         setTracks(newTracks)
     }
+
+    const handleTrackClick = (trackNum) => {
+        console.log(trackNum)
+        if (trackNum === selectedTrack) {
+            setSelectedTrack(-1);
+        }
+        else {
+            setSelectedTrack(trackNum);
+        }
+    }
+
 
     const millisToMinutesAndSeconds = millis => {
         var minutes = Math.floor(millis / 60000);
@@ -61,15 +76,22 @@ let Input = (props) => {
 
         return (<div className='tracks'>
             {
-                tracks.map((track, index) => (
+                tracks.map((obj, index) => (
                     <Track
                         key={index}
                         index={index}
-                        artist={track.artist}
-                        name={track.name}
-                        duration={track.duration}
-                        art={track.art}
-                        audio={track.audio} />
+                        artist={obj.track.artist}
+                        name={obj.track.name}
+                        duration={obj.track.duration}
+                        art={obj.track.art}
+                        selected={(index === selectedTrack) ? true : false}
+                        handleTrackClick={handleTrackClick}
+                        audio={obj.track.audio}
+                        venue={obj.event.venue ? obj.event.venue['name'] : '?'}
+                        venueLink={obj.event.venue ? obj.event.venue['link'] : '/'}
+                        location={obj.event.location}
+
+                    />
                 ))
             }
         </div>);

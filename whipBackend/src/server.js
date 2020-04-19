@@ -3,6 +3,7 @@ const app = express(); // instantiate an Express object
 const bodyParser = require("body-parser");
 const logic = require('./logic.js')
 const cors = require('cors')
+var fs = require("fs");
 
 app.use(bodyParser.json()); // decode JSON-formatted incoming POST data
 app.use(cors())

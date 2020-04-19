@@ -1,0 +1,3032 @@
+{
+    "events": [
+        {
+            "event": {
+                "link": "http://www.songkick.com/festivals/765159-brooklyn-folk/id/39391802-brooklyn-folk-festival-2020?utm_source=59718&utm_medium=partner",
+                "popularity": 0.002117,
+                "status": "ok",
+                "date": null,
+                "artist": "The Cactus Blossoms",
+                "venue": {
+                    "name": "St. Ann & the Holy Trinity Church",
+                    "link": "http://www.songkick.com/venues/61316-st-ann-and-the-holy-trinity-church?utm_source=59718&utm_medium=partner"
+                },
+                "location": "Brooklyn, NY, US"
+            },
+            "artist": {
+                "name": "The Cactus Blossoms",
+                "id": "7kWwQAe9JnYNMk4kuEe73S",
+                "genres": [
+                    "alternative country",
+                    "midwest americana",
+                    "new americana"
+                ],
+                "popularity": 42
+            },
+            "tracks": [
+                {
+                    "name": "Got a Lotta Love",
+                    "artist": "The Cactus Blossoms",
+                    "album": "Easy Way",
+                    "art": "https://i.scdn.co/image/ab67616d0000b27380784b7bad1c606bc662f7df",
+                    "duration": 182826,
+                    "popularity": 44,
+                    "audio": [
+                        "preview_url"
+                    ],
+                    "colors": [
+                        [
+                            200,
+                            199,
+                            194
+                        ],
+                        [
+                            35,
+                            44,
+                            48
+                        ],
+                        [
+                            126,
+                            128,
+                            126
+                        ],
+                        [
+                            109,
+                            86,
+                            84
+                        ],
+                        [
+                            104,
+                            100,
+                            92
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "event": {
+                "link": "http://www.songkick.com/concerts/38027849-matt-bednarsky-at-brooklyn-music-shop?utm_source=59718&utm_medium=partner",
+                "popularity": 0.000056,
+                "status": "cancelled",
+                "date": "2020-04-18T19:30:00-0400",
+                "artist": "Matt Bednarsky",
+                "venue": {
+                    "name": "Brooklyn Music Shop",
+                    "link": "http://www.songkick.com/venues/3833649-brooklyn-music-shop?utm_source=59718&utm_medium=partner"
+                },
+                "location": "Brooklyn, NY, US"
+            },
+            "artist": {
+                "name": "Matt Bednarsky",
+                "id": "5Y2ku2X6qOyNcphzaXmPd9",
+                "genres": [],
+                "popularity": 36
+            },
+            "tracks": [
+                {
+                    "name": "Grand",
+                    "artist": "Matt Bednarsky",
+                    "album": "A Bigger Picture",
+                    "art": "https://i.scdn.co/image/ab67616d0000b2738b553268a56cfd704116b8fd",
+                    "duration": 203533,
+                    "popularity": 44,
+                    "audio": [
+                        "preview_url"
+                    ],
+                    "colors": [
+                        [
+                            226,
+                            218,
+                            183
+                        ],
+                        [
+                            58,
+                            74,
+                            67
+                        ],
+                        [
+                            131,
+                            122,
+                            88
+                        ],
+                        [
+                            118,
+                            106,
+                            79
+                        ],
+                        [
+                            108,
+                            148,
+                            144
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "event": {
+                "link": "http://www.songkick.com/concerts/38902634-freddy-cole-at-appel-room-jazz-at-lincoln-center?utm_source=59718&utm_medium=partner",
+                "popularity": 0.000597,
+                "status": "ok",
+                "date": null,
+                "artist": "Freddy Cole",
+                "venue": {
+                    "name": "Appel Room, Jazz at Lincoln Center",
+                    "link": "http://www.songkick.com/venues/2738983-appel-room-jazz-at-lincoln-center?utm_source=59718&utm_medium=partner"
+                },
+                "location": "New York, NY, US"
+            },
+            "artist": {
+                "name": "Freddy Cole",
+                "id": "2OsXkNVomm1hFGrdfBm0ZK",
+                "genres": [
+                    "vocal jazz"
+                ],
+                "popularity": 34
+            },
+            "tracks": [
+                {
+                    "name": "My Mood Is You",
+                    "artist": "Freddy Cole",
+                    "album": "My Mood Is You",
+                    "art": "https://i.scdn.co/image/ab67616d0000b27377228e65291695c392b56b8e",
+                    "duration": 345821,
+                    "popularity": 36,
+                    "audio": [
+                        "preview_url"
+                    ],
+                    "colors": [
+                        [
+                            9,
+                            8,
+                            8
+                        ],
+                        [
+                            184,
+                            170,
+                            153
+                        ],
+                        [
+                            86,
+                            79,
+                            80
+                        ],
+                        [
+                            123,
+                            124,
+                            132
+                        ],
+                        [
+                            124,
+                            132,
+                            134
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "event": {
+                "link": "http://www.songkick.com/concerts/39112214-new-york-philharmonic-at-david-geffen-hall-lincoln-center?utm_source=59718&utm_medium=partner",
+                "popularity": 0.008147,
+                "status": "ok",
+                "date": "2020-04-18T20:00:00-0400",
+                "artist": "New York Philharmonic",
+                "venue": {
+                    "name": "David Geffen Hall, Lincoln Center",
+                    "link": "http://www.songkick.com/venues/6204-david-geffen-hall-lincoln-center?utm_source=59718&utm_medium=partner"
+                },
+                "location": "New York, NY, US"
+            },
+            "artist": {
+                "name": "New York Philharmonic",
+                "id": "3gacryguGmpmCvgPGt2CBI",
+                "genres": [
+                    "classical",
+                    "classical performance",
+                    "orchestra"
+                ],
+                "popularity": 60
+            },
+            "tracks": [
+                {
+                    "name": "Turandot / Act 3: Turandot / Act 3: \"Nessun dorma!\" - Live At Central Park, New York/2011",
+                    "artist": "Andrea Bocelli",
+                    "album": "Concerto: One Night In Central Park (Remastered)",
+                    "art": "https://i.scdn.co/image/ab67616d0000b273129b908b63777a40b03d0d6c",
+                    "duration": 247009,
+                    "popularity": 54,
+                    "audio": [
+                        "preview_url"
+                    ],
+                    "colors": [
+                        [
+                            213,
+                            206,
+                            196
+                        ],
+                        [
+                            22,
+                            22,
+                            23
+                        ],
+                        [
+                            154,
+                            87,
+                            64
+                        ],
+                        [
+                            118,
+                            150,
+                            151
+                        ],
+                        [
+                            104,
+                            107,
+                            151
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "event": {
+                "link": "http://www.songkick.com/concerts/39144044-david-foster-at-nycb-theatre-at-westbury?utm_source=59718&utm_medium=partner",
+                "popularity": 0.005432,
+                "status": "ok",
+                "date": "2020-04-18T20:00:00-0400",
+                "artist": "David Foster",
+                "venue": {
+                    "name": "NYCB Theatre at Westbury",
+                    "link": "http://www.songkick.com/venues/1092586-nycb-theatre-at-westbury?utm_source=59718&utm_medium=partner"
+                },
+                "location": "Westbury, NY, US"
+            },
+            "artist": {
+                "name": "David Foster",
+                "id": "0SgQK24WzZf2pXBXYqHJYF",
+                "genres": [
+                    "soft rock"
+                ],
+                "popularity": 55
+            },
+            "tracks": [
+                {
+                    "name": "The Best of Me",
+                    "artist": "David Foster",
+                    "album": "David Foster",
+                    "art": "https://i.scdn.co/image/ab67616d0000b2732c6fc345cd9830580b4bf62a",
+                    "duration": 245760,
+                    "popularity": 54,
+                    "audio": [
+                        "preview_url"
+                    ],
+                    "colors": [
+                        [
+                            198,
+                            191,
+                            208
+                        ],
+                        [
+                            49,
+                            32,
+                            32
+                        ],
+                        [
+                            185,
+                            105,
+                            85
+                        ],
+                        [
+                            109,
+                            90,
+                            140
+                        ],
+                        [
+                            205,
+                            155,
+                            137
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "event": {
+                "link": "http://www.songkick.com/concerts/39150143-elton-john-at-nycb-live-home-of-the-nassau-veterans-memorial-coliseum?utm_source=59718&utm_medium=partner",
+                "popularity": 0.400698,
+                "status": "postponed",
+                "date": "2020-04-18T20:00:00-0400",
+                "artist": "Elton John",
+                "venue": {
+                    "name": "NYCB LIVE: Home of the Nassau Veterans Memorial Coliseum",
+                    "link": "http://www.songkick.com/venues/195908-nycb-live-home-of-the-nassau-veterans-memorial-coliseum?utm_source=59718&utm_medium=partner"
+                },
+                "location": "Uniondale, NY, US"
+            },
+            "artist": {
+                "name": "Elton John",
+                "id": "3PhoLpVuITZKcymswpck5b",
+                "genres": [
+                    "glam rock",
+                    "mellow gold",
+                    "piano rock",
+                    "soft rock"
+                ],
+                "popularity": 84
+            },
+            "tracks": [
+                {
+                    "name": "Rocket Man (I Think It's Going To Be A Long, Long Time)",
+                    "artist": "Elton John",
+                    "album": "Honky Chateau",
+                    "art": "https://i.scdn.co/image/ab67616d0000b2733009007708ab5134936a58b3",
+                    "duration": 281613,
+                    "popularity": 81,
+                    "audio": [
+                        "preview_url"
+                    ],
+                    "colors": [
+                        [
+                            216,
+                            193,
+                            155
+                        ],
+                        [
+                            54,
+                            58,
+                            45
+                        ],
+                        [
+                            235,
+                            232,
+                            226
+                        ],
+                        [
+                            117,
+                            108,
+                            88
+                        ],
+                        [
+                            121,
+                            109,
+                            67
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "event": {
+                "link": "http://www.songkick.com/concerts/39156085-lisa-lisa-at-st-george-theatre?utm_source=59718&utm_medium=partner",
+                "popularity": 0.002783,
+                "status": "ok",
+                "date": "2020-04-18T20:00:00-0400",
+                "artist": "Lisa Lisa",
+                "venue": {
+                    "name": "St. George Theatre",
+                    "link": "http://www.songkick.com/venues/13586-st-george-theatre?utm_source=59718&utm_medium=partner"
+                },
+                "location": "Staten Island, NY, US"
+            },
+            "artist": {
+                "name": "Lisa Lisa & Cult Jam",
+                "id": "1vgjN6nIPNKiiQGE9PtzTT",
+                "genres": [
+                    "electro",
+                    "freestyle",
+                    "funk",
+                    "new jack swing",
+                    "quiet storm",
+                    "urban contemporary"
+                ],
+                "popularity": 49
+            },
+            "tracks": [
+                {
+                    "name": "I Wonder If I Take You Home",
+                    "artist": "Lisa Lisa & Cult Jam",
+                    "album": "Playlist: The Very Best Of Lisa Lisa & Cult Jam",
+                    "art": "https://i.scdn.co/image/ab67616d0000b273b7bac789ab42f780d00ebd47",
+                    "duration": 404213,
+                    "popularity": 52,
+                    "audio": [
+                        "preview_url"
+                    ],
+                    "colors": [
+                        [
+                            204,
+                            163,
+                            155
+                        ],
+                        [
+                            32,
+                            39,
+                            61
+                        ],
+                        [
+                            100,
+                            124,
+                            160
+                        ],
+                        [
+                            121,
+                            89,
+                            80
+                        ],
+                        [
+                            146,
+                            156,
+                            170
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "event": {
+                "link": "http://www.songkick.com/concerts/39173696-new-york-philharmonic-at-david-geffen-hall-lincoln-center?utm_source=59718&utm_medium=partner",
+                "popularity": 0.008147,
+                "status": "ok",
+                "date": "2020-04-18T14:00:00-0400",
+                "artist": "New York Philharmonic",
+                "venue": {
+                    "name": "David Geffen Hall, Lincoln Center",
+                    "link": "http://www.songkick.com/venues/6204-david-geffen-hall-lincoln-center?utm_source=59718&utm_medium=partner"
+                },
+                "location": "New York, NY, US"
+            },
+            "artist": {
+                "name": "New York Philharmonic",
+                "id": "3gacryguGmpmCvgPGt2CBI",
+                "genres": [
+                    "classical",
+                    "classical performance",
+                    "orchestra"
+                ],
+                "popularity": 60
+            },
+            "tracks": [
+                {
+                    "name": "Turandot / Act 3: Turandot / Act 3: \"Nessun dorma!\" - Live At Central Park, New York/2011",
+                    "artist": "Andrea Bocelli",
+                    "album": "Concerto: One Night In Central Park (Remastered)",
+                    "art": "https://i.scdn.co/image/ab67616d0000b273129b908b63777a40b03d0d6c",
+                    "duration": 247009,
+                    "popularity": 54,
+                    "audio": [
+                        "preview_url"
+                    ],
+                    "colors": [
+                        [
+                            213,
+                            206,
+                            196
+                        ],
+                        [
+                            22,
+                            22,
+                            23
+                        ],
+                        [
+                            154,
+                            87,
+                            64
+                        ],
+                        [
+                            118,
+                            150,
+                            151
+                        ],
+                        [
+                            104,
+                            107,
+                            151
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "event": {
+                "link": "http://www.songkick.com/concerts/39228166-little-dragon-at-brooklyn-steel?utm_source=59718&utm_medium=partner",
+                "popularity": 0.116447,
+                "status": "postponed",
+                "date": "2020-04-18T20:00:00-0400",
+                "artist": "Little Dragon",
+                "venue": {
+                    "name": "Brooklyn Steel",
+                    "link": "http://www.songkick.com/venues/3457684-brooklyn-steel?utm_source=59718&utm_medium=partner"
+                },
+                "location": "Brooklyn, NY, US"
+            },
+            "artist": {
+                "name": "Little Dragon",
+                "id": "6Tyzp9KzpiZ04DABQoedps",
+                "genres": [
+                    "alternative dance",
+                    "alternative r&b",
+                    "art pop",
+                    "chillwave",
+                    "downtempo",
+                    "electronica",
+                    "electropop",
+                    "escape room",
+                    "gothenburg indie",
+                    "indie r&b",
+                    "indie soul",
+                    "indietronica",
+                    "new rave",
+                    "swedish electropop",
+                    "swedish synthpop",
+                    "trip hop"
+                ],
+                "popularity": 68
+            },
+            "tracks": [
+                {
+                    "name": "Where You Belong",
+                    "artist": "Little Dragon",
+                    "album": "New Me, Same Us",
+                    "art": "https://i.scdn.co/image/ab67616d0000b2738c96e174ffc6c2517558b415",
+                    "duration": 207037,
+                    "popularity": 63,
+                    "audio": [
+                        "preview_url"
+                    ],
+                    "colors": [
+                        [
+                            23,
+                            13,
+                            15
+                        ],
+                        [
+                            179,
+                            124,
+                            105
+                        ],
+                        [
+                            49,
+                            118,
+                            158
+                        ],
+                        [
+                            100,
+                            36,
+                            33
+                        ],
+                        [
+                            57,
+                            139,
+                            87
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "event": {
+                "link": "http://www.songkick.com/concerts/39229601-tops-at-bowery-ballroom?utm_source=59718&utm_medium=partner",
+                "popularity": 0.014503,
+                "status": "ok",
+                "date": "2020-04-18T20:00:00-0400",
+                "artist": "TOPS",
+                "venue": {
+                    "name": "The Bowery Ballroom",
+                    "link": "http://www.songkick.com/venues/316-bowery-ballroom?utm_source=59718&utm_medium=partner"
+                },
+                "location": "New York (NYC), NY, US"
+            },
+            "artist": {
+                "name": "TOPS",
+                "id": "2SdK1QDmZIP2hk94rSaLl9",
+                "genres": [
+                    "art pop",
+                    "chillwave",
+                    "dream pop",
+                    "experimental pop",
+                    "indie pop",
+                    "indie rock",
+                    "indie soul",
+                    "indietronica",
+                    "neo-psychedelic",
+                    "new rave",
+                    "quebec indie",
+                    "shiver pop"
+                ],
+                "popularity": 59
+            },
+            "tracks": [
+                {
+                    "name": "Way to be Loved",
+                    "artist": "TOPS",
+                    "album": "Picture You Staring",
+                    "art": "https://i.scdn.co/image/ab67616d0000b273cc8a5d4f1edaa004a3abece7",
+                    "duration": 263396,
+                    "popularity": 60,
+                    "audio": [
+                        "preview_url"
+                    ],
+                    "colors": [
+                        [
+                            211,
+                            140,
+                            47
+                        ],
+                        [
+                            89,
+                            110,
+                            126
+                        ],
+                        [
+                            203,
+                            139,
+                            187
+                        ],
+                        [
+                            242,
+                            221,
+                            98
+                        ],
+                        [
+                            177,
+                            123,
+                            142
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "event": {
+                "link": "http://www.songkick.com/concerts/39230421-alarm-at-sony-hall?utm_source=59718&utm_medium=partner",
+                "popularity": 0.010345,
+                "status": "ok",
+                "date": "2020-04-18T20:00:00-0400",
+                "artist": "The Alarm",
+                "venue": {
+                    "name": "Sony Hall",
+                    "link": "http://www.songkick.com/venues/3841499-sony-hall?utm_source=59718&utm_medium=partner"
+                },
+                "location": "New York (NYC), NY, US"
+            },
+            "artist": {
+                "name": "The Alarm",
+                "id": "0oQLexIBY9SlMhtbSIPFAO",
+                "genres": [
+                    "dance rock",
+                    "jangle pop",
+                    "new romantic",
+                    "new wave",
+                    "new wave pop",
+                    "welsh rock"
+                ],
+                "popularity": 42
+            },
+            "tracks": [
+                {
+                    "name": "Rain in the Summertime - Remastered",
+                    "artist": "The Alarm",
+                    "album": "Eye of the Hurricane (1987-1988 Remastered)",
+                    "art": "https://i.scdn.co/image/ab67616d0000b2739b07708b5e1e03e29c290fac",
+                    "duration": 314840,
+                    "popularity": 42,
+                    "audio": [
+                        "preview_url"
+                    ],
+                    "colors": [
+                        [
+                            43,
+                            48,
+                            57
+                        ],
+                        [
+                            73,
+                            117,
+                            158
+                        ],
+                        [
+                            155,
+                            163,
+                            174
+                        ],
+                        [
+                            104,
+                            103,
+                            103
+                        ],
+                        [
+                            124,
+                            132,
+                            132
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "event": {
+                "link": "http://www.songkick.com/concerts/39258581-jared-freid-at-gotham-comedy-club?utm_source=59718&utm_medium=partner",
+                "popularity": 0.000002,
+                "status": "ok",
+                "date": "2020-04-18T18:30:00-0400",
+                "artist": "Jared Freid",
+                "venue": {
+                    "name": "Gotham Comedy Club",
+                    "link": "http://www.songkick.com/venues/202403-gotham-comedy-club?utm_source=59718&utm_medium=partner"
+                },
+                "location": "New York (NYC), NY, US"
+            },
+            "artist": {
+                "name": "Jared Freid",
+                "id": "1aKDw0JbB1aJaqXSkiGTon",
+                "genres": [
+                    "new comedy"
+                ],
+                "popularity": 13
+            },
+            "tracks": [
+                {
+                    "name": "Healthy People Suck",
+                    "artist": "Jared Freid",
+                    "album": "Always a Momma Bear",
+                    "art": "https://i.scdn.co/image/ab67616d0000b27387c78975ab808008c8c35211",
+                    "duration": 184672,
+                    "popularity": 11,
+                    "audio": [
+                        "preview_url"
+                    ],
+                    "colors": [
+                        [
+                            226,
+                            222,
+                            215
+                        ],
+                        [
+                            73,
+                            25,
+                            18
+                        ],
+                        [
+                            122,
+                            36,
+                            24
+                        ],
+                        [
+                            194,
+                            129,
+                            79
+                        ],
+                        [
+                            134,
+                            131,
+                            130
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "event": {
+                "link": "http://www.songkick.com/concerts/39274150-distractfold-at-unknown-venue?utm_source=59718&utm_medium=partner",
+                "popularity": 0.000007,
+                "status": "cancelled",
+                "date": "2020-04-18T19:00:00-0400",
+                "artist": "Distractfold",
+                "venue": {
+                    "name": "Unknown venue",
+                    "link": null
+                },
+                "location": "New York (NYC), NY, US"
+            },
+            "artist": {
+                "name": "Distractfold Ensemble",
+                "id": "3x8javGwftC2wROpaGZEVI",
+                "genres": [],
+                "popularity": 0
+            },
+            "tracks": [
+                {
+                    "name": "Agricola IX",
+                    "artist": "Richard Craig",
+                    "album": "Vale",
+                    "art": "https://i.scdn.co/image/ab67616d0000b273689c1f4fc19b30e65d238e47",
+                    "duration": 540006,
+                    "popularity": 0,
+                    "audio": [
+                        "preview_url"
+                    ],
+                    "colors": [
+                        [
+                            45,
+                            102,
+                            167
+                        ],
+                        [
+                            20,
+                            29,
+                            40
+                        ],
+                        [
+                            172,
+                            201,
+                            233
+                        ],
+                        [
+                            137,
+                            181,
+                            227
+                        ],
+                        [
+                            7,
+                            43,
+                            87
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "event": {
+                "link": "http://www.songkick.com/concerts/39319005-undertones-at-gramercy-theatre?utm_source=59718&utm_medium=partner",
+                "popularity": 0.022173,
+                "status": "cancelled",
+                "date": "2020-04-18T19:00:00-0400",
+                "artist": "The Undertones",
+                "venue": {
+                    "name": "Gramercy Theatre",
+                    "link": "http://www.songkick.com/venues/502461-gramercy-theatre?utm_source=59718&utm_medium=partner"
+                },
+                "location": "New York (NYC), NY, US"
+            },
+            "artist": {
+                "name": "The Undertones",
+                "id": "2WRStKp4ihGVUzlzWfv1Qt",
+                "genres": [
+                    "dance rock",
+                    "mod revival",
+                    "new wave",
+                    "new wave pop",
+                    "post-punk",
+                    "protopunk",
+                    "pub rock",
+                    "punk",
+                    "ska"
+                ],
+                "popularity": 50
+            },
+            "tracks": [
+                {
+                    "name": "Teenage Kicks",
+                    "artist": "The Undertones",
+                    "album": "The Undertones",
+                    "art": "https://i.scdn.co/image/ab67616d0000b2733b55c757449574c107e08cea",
+                    "duration": 148480,
+                    "popularity": 45,
+                    "audio": [
+                        "preview_url"
+                    ],
+                    "colors": [
+                        [
+                            234,
+                            229,
+                            216
+                        ],
+                        [
+                            66,
+                            83,
+                            77
+                        ],
+                        [
+                            96,
+                            110,
+                            104
+                        ],
+                        [
+                            108,
+                            121,
+                            117
+                        ],
+                        [
+                            15,
+                            160,
+                            176
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "event": {
+                "link": "http://www.songkick.com/concerts/39343803-matthew-good-at-le-poisson-rouge?utm_source=59718&utm_medium=partner",
+                "popularity": 0.007759,
+                "status": "ok",
+                "date": "2020-04-18T18:30:00-0400",
+                "artist": "Matthew Good",
+                "venue": {
+                    "name": "Le Poisson Rouge",
+                    "link": "http://www.songkick.com/venues/28184-le-poisson-rouge?utm_source=59718&utm_medium=partner"
+                },
+                "location": "New York (NYC), NY, US"
+            },
+            "artist": {
+                "name": "Matthew Good",
+                "id": "4EhvF0sd1sdEJ49h6AuWvB",
+                "genres": [
+                    "canadian indie"
+                ],
+                "popularity": 45
+            },
+            "tracks": [
+                {
+                    "name": "Born Losers",
+                    "artist": "Matthew Good",
+                    "album": "Old Fighters",
+                    "art": "https://i.scdn.co/image/ab67616d0000b273c4742de02b2b74611b941abd",
+                    "duration": 317413,
+                    "popularity": 28,
+                    "audio": [
+                        "preview_url"
+                    ],
+                    "colors": [
+                        [
+                            123,
+                            152,
+                            150
+                        ],
+                        [
+                            228,
+                            222,
+                            213
+                        ],
+                        [
+                            48,
+                            42,
+                            36
+                        ],
+                        [
+                            64,
+                            68,
+                            76
+                        ],
+                        [
+                            44,
+                            84,
+                            84
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "event": {
+                "link": "http://www.songkick.com/concerts/39353101-john-kay-and-steppenwolf-at-iridium?utm_source=59718&utm_medium=partner",
+                "popularity": 0.0002,
+                "status": "ok",
+                "date": "2020-04-18T20:30:00-0400",
+                "artist": "John Kay & Steppenwolf",
+                "venue": {
+                    "name": "Iridium",
+                    "link": "http://www.songkick.com/venues/725656-iridium?utm_source=59718&utm_medium=partner"
+                },
+                "location": "New York (NYC), NY, US"
+            },
+            "artist": {
+                "name": "John Kay",
+                "id": "3IJv5pAua8t2Q5FP79TXOt",
+                "genres": [],
+                "popularity": 28
+            },
+            "tracks": [
+                {
+                    "name": "Magic Carpet Ride (Live)",
+                    "artist": "John Kay",
+                    "album": "Live in Louisville",
+                    "art": "https://i.scdn.co/image/ab67616d0000b273a2b047a1fc821c15012ed871",
+                    "duration": 317400,
+                    "popularity": 22,
+                    "audio": [
+                        "preview_url"
+                    ],
+                    "colors": [
+                        [
+                            30,
+                            26,
+                            30
+                        ],
+                        [
+                            191,
+                            143,
+                            81
+                        ],
+                        [
+                            101,
+                            100,
+                            99
+                        ],
+                        [
+                            130,
+                            145,
+                            150
+                        ],
+                        [
+                            110,
+                            126,
+                            158
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "event": {
+                "link": "http://www.songkick.com/concerts/39358381-maryelaine-jenkins-at-rockwood-music-hall-stage-3?utm_source=59718&utm_medium=partner",
+                "popularity": 0.000014,
+                "status": "ok",
+                "date": "2020-04-18T19:00:00-0400",
+                "artist": "Mary-Elaine Jenkins",
+                "venue": {
+                    "name": "Rockwood Music Hall Stage 3",
+                    "link": "http://www.songkick.com/venues/2399549-rockwood-music-hall-stage-3?utm_source=59718&utm_medium=partner"
+                },
+                "location": "New York (NYC), NY, US"
+            },
+            "artist": {
+                "name": "Mary-Elaine Jenkins",
+                "id": "5K1Dnc42wlIMlK5oYHRFVu",
+                "genres": [],
+                "popularity": 3
+            },
+            "tracks": [
+                {
+                    "name": "The Americans",
+                    "artist": "Mary-Elaine Jenkins",
+                    "album": "Hold Still",
+                    "art": "https://i.scdn.co/image/ab67616d0000b2737ee55a912724b28c17b20f02",
+                    "duration": 316640,
+                    "popularity": 4,
+                    "audio": [
+                        "preview_url"
+                    ],
+                    "colors": [
+                        [
+                            16,
+                            15,
+                            26
+                        ],
+                        [
+                            171,
+                            167,
+                            165
+                        ],
+                        [
+                            117,
+                            107,
+                            104
+                        ],
+                        [
+                            87,
+                            79,
+                            81
+                        ],
+                        [
+                            100,
+                            100,
+                            95
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "event": {
+                "link": "http://www.songkick.com/concerts/39372071-waves-de-ache-at-rockwood-music-hall?utm_source=59718&utm_medium=partner",
+                "popularity": 0,
+                "status": "ok",
+                "date": null,
+                "artist": "Waves De Aché",
+                "venue": {
+                    "name": "Rockwood Music Hall",
+                    "link": "http://www.songkick.com/venues/34514-rockwood-music-hall?utm_source=59718&utm_medium=partner"
+                },
+                "location": "New York (NYC), NY, US"
+            },
+            "artist": {
+                "name": "Waves de Aché",
+                "id": "1l4tnXRIxl6xnpnUFzBJiJ",
+                "genres": [],
+                "popularity": 0
+            },
+            "tracks": [
+                {
+                    "name": "In Search Of",
+                    "artist": "Waves de Aché",
+                    "album": "Forward Motion",
+                    "art": "https://i.scdn.co/image/ab67616d0000b27315ae054a6a1756203dedda96",
+                    "duration": 480791,
+                    "popularity": 1,
+                    "audio": [
+                        "preview_url"
+                    ],
+                    "colors": [
+                        [
+                            177,
+                            102,
+                            63
+                        ],
+                        [
+                            73,
+                            90,
+                            104
+                        ],
+                        [
+                            205,
+                            217,
+                            210
+                        ],
+                        [
+                            145,
+                            148,
+                            159
+                        ],
+                        [
+                            229,
+                            207,
+                            144
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "event": {
+                "link": "http://www.songkick.com/festivals/3285372-voices-in-the-heights/id/39373271-voices-in-the-heights-2020?utm_source=59718&utm_medium=partner",
+                "popularity": 0.000072,
+                "status": "ok",
+                "date": null,
+                "artist": "Scott Cook",
+                "venue": {
+                    "name": "Voices in the Heights",
+                    "link": "http://www.songkick.com/venues/1098296-voices-in-the-heights?utm_source=59718&utm_medium=partner"
+                },
+                "location": "Brooklyn, NY, US"
+            },
+            "artist": {
+                "name": "Scott Cook",
+                "id": "3NPSzus5OqXRBS42d7EuJe",
+                "genres": [],
+                "popularity": 5
+            },
+            "tracks": [
+                {
+                    "name": "Pass It Along",
+                    "artist": "Scott Cook",
+                    "album": "Pass It Along",
+                    "art": "https://i.scdn.co/image/ab67616d0000b273b5626e23085947f49dc127fd",
+                    "duration": 293213,
+                    "popularity": 11,
+                    "audio": [
+                        "preview_url"
+                    ],
+                    "colors": [
+                        [
+                            221,
+                            177,
+                            130
+                        ],
+                        [
+                            54,
+                            95,
+                            171
+                        ],
+                        [
+                            114,
+                            71,
+                            58
+                        ],
+                        [
+                            165,
+                            122,
+                            102
+                        ],
+                        [
+                            174,
+                            189,
+                            197
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "event": {
+                "link": "http://www.songkick.com/concerts/39376358-apb-at-mercury-lounge?utm_source=59718&utm_medium=partner",
+                "popularity": 0.000481,
+                "status": "ok",
+                "date": "2020-04-18T19:00:00-0400",
+                "artist": "APB",
+                "venue": {
+                    "name": "Mercury Lounge",
+                    "link": "http://www.songkick.com/venues/364-mercury-lounge?utm_source=59718&utm_medium=partner"
+                },
+                "location": "New York (NYC), NY, US"
+            },
+            "artist": {
+                "name": "A Boogie Wit da Hoodie",
+                "id": "31W5EY0aAly4Qieq6OFu6I",
+                "genres": [
+                    "melodic rap",
+                    "pop rap",
+                    "rap",
+                    "trap"
+                ],
+                "popularity": 89
+            },
+            "tracks": [
+                {
+                    "name": "Numbers (feat. Roddy Ricch, Gunna and London On Da Track)",
+                    "artist": "A Boogie Wit da Hoodie",
+                    "album": "Artist 2.0",
+                    "art": "https://i.scdn.co/image/ab67616d0000b2731072a34d8c8d75e9b2545d8a",
+                    "duration": 188563,
+                    "popularity": 84,
+                    "audio": [
+                        "preview_url"
+                    ],
+                    "colors": [
+                        [
+                            36,
+                            26,
+                            34
+                        ],
+                        [
+                            199,
+                            203,
+                            215
+                        ],
+                        [
+                            133,
+                            151,
+                            189
+                        ],
+                        [
+                            114,
+                            93,
+                            95
+                        ],
+                        [
+                            107,
+                            120,
+                            163
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "event": {
+                "link": "http://www.songkick.com/concerts/39382966-dehd-at-asbury-park-brewery?utm_source=59718&utm_medium=partner",
+                "popularity": 0.000182,
+                "status": "ok",
+                "date": null,
+                "artist": "Dehd",
+                "venue": {
+                    "name": "Asbury Park Brewery",
+                    "link": "http://www.songkick.com/venues/3556869-asbury-park-brewery?utm_source=59718&utm_medium=partner"
+                },
+                "location": "Asbury Park, NJ, US"
+            },
+            "artist": {
+                "name": "Dehd",
+                "id": "6yzuBFtT6dK2aQMZJZtcB1",
+                "genres": [
+                    "garage psych",
+                    "indie garage rock",
+                    "indie rock"
+                ],
+                "popularity": 40
+            },
+            "tracks": [
+                {
+                    "name": "Lucky",
+                    "artist": "Dehd",
+                    "album": "Water",
+                    "art": "https://i.scdn.co/image/ab67616d0000b273347e279afa16f264c0d48699",
+                    "duration": 153414,
+                    "popularity": 49,
+                    "audio": [
+                        "preview_url"
+                    ],
+                    "colors": [
+                        [
+                            251,
+                            235,
+                            52
+                        ],
+                        [
+                            146,
+                            72,
+                            108
+                        ],
+                        [
+                            198,
+                            150,
+                            89
+                        ],
+                        [
+                            131,
+                            132,
+                            127
+                        ],
+                        [
+                            176,
+                            171,
+                            136
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "event": {
+                "link": "http://www.songkick.com/concerts/39400011-quix-at-webster-hall?utm_source=59718&utm_medium=partner",
+                "popularity": 0.00517,
+                "status": "cancelled",
+                "date": "2020-04-18T23:30:00-0400",
+                "artist": "QUIX",
+                "venue": {
+                    "name": "Webster Hall",
+                    "link": "http://www.songkick.com/venues/924-webster-hall?utm_source=59718&utm_medium=partner"
+                },
+                "location": "New York (NYC), NY, US"
+            },
+            "artist": {
+                "name": "QUIX",
+                "id": "19EW4WBhl0fvZUQgi7wV5M",
+                "genres": [
+                    "bass trap",
+                    "brostep",
+                    "edm",
+                    "electro house",
+                    "electronic trap",
+                    "vapor twitch",
+                    "zapstep"
+                ],
+                "popularity": 58
+            },
+            "tracks": [
+                {
+                    "name": "Creep On Me (feat. French Montana & DJ Snake) - QUIX Remix",
+                    "artist": "GASHI",
+                    "album": "Creep On Me (Remixes) (feat. French Montana & DJ Snake)",
+                    "art": "https://i.scdn.co/image/ab67616d0000b273d073438df47f7f416ecd908d",
+                    "duration": 238163,
+                    "popularity": 61,
+                    "audio": [
+                        "preview_url"
+                    ],
+                    "colors": [
+                        [
+                            247,
+                            211,
+                            176
+                        ],
+                        [
+                            55,
+                            55,
+                            61
+                        ],
+                        [
+                            175,
+                            77,
+                            76
+                        ],
+                        [
+                            173,
+                            130,
+                            105
+                        ],
+                        [
+                            197,
+                            123,
+                            38
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "event": {
+                "link": "http://www.songkick.com/concerts/39402699-goodbye-honolulu-at-market-hotel?utm_source=59718&utm_medium=partner",
+                "popularity": 0.010665,
+                "status": "ok",
+                "date": null,
+                "artist": "Goodbye Honolulu",
+                "venue": {
+                    "name": "Market Hotel",
+                    "link": "http://www.songkick.com/venues/33121-market-hotel?utm_source=59718&utm_medium=partner"
+                },
+                "location": "Brooklyn, NY, US"
+            },
+            "artist": {
+                "name": "Goodbye Honolulu",
+                "id": "32YbiP7aG6phXVds7z13nf",
+                "genres": [
+                    "toronto indie"
+                ],
+                "popularity": 32
+            },
+            "tracks": [
+                {
+                    "name": "Typical",
+                    "artist": "Goodbye Honolulu",
+                    "album": "More Honey",
+                    "art": "https://i.scdn.co/image/ab67616d0000b273325acc0a79720b0000e8cbaf",
+                    "duration": 232520,
+                    "popularity": 40,
+                    "audio": [
+                        "preview_url"
+                    ],
+                    "colors": [
+                        [
+                            177,
+                            93,
+                            121
+                        ],
+                        [
+                            106,
+                            39,
+                            55
+                        ],
+                        [
+                            155,
+                            34,
+                            61
+                        ],
+                        [
+                            235,
+                            217,
+                            170
+                        ],
+                        [
+                            204,
+                            156,
+                            189
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "event": {
+                "link": "http://www.songkick.com/concerts/39406063-massacre-at-kingsland?utm_source=59718&utm_medium=partner",
+                "popularity": 0.001457,
+                "status": "ok",
+                "date": "2020-04-18T19:00:00-0400",
+                "artist": "Massacre",
+                "venue": {
+                    "name": "The Kingsland",
+                    "link": "http://www.songkick.com/venues/276616-kingsland?utm_source=59718&utm_medium=partner"
+                },
+                "location": "Brooklyn, NY, US"
+            },
+            "artist": {
+                "name": "The Brian Jonestown Massacre",
+                "id": "30uiS1n3uIGXJEYFR1GVDy",
+                "genres": [
+                    "alternative rock",
+                    "bay area indie",
+                    "chamber psych",
+                    "dream pop",
+                    "freak folk",
+                    "garage rock",
+                    "neo-psychedelic",
+                    "noise pop",
+                    "nu gaze",
+                    "rock",
+                    "shoegaze"
+                ],
+                "popularity": 58
+            },
+            "tracks": [
+                {
+                    "name": "Anemone",
+                    "artist": "The Brian Jonestown Massacre",
+                    "album": "Their Satanic Majesties' Second Request",
+                    "art": "https://i.scdn.co/image/ab67616d0000b2732557f5ed1ca07d5111d49b93",
+                    "duration": 334466,
+                    "popularity": 63,
+                    "audio": [
+                        "preview_url"
+                    ],
+                    "colors": [
+                        [
+                            41,
+                            41,
+                            41
+                        ],
+                        [
+                            237,
+                            243,
+                            243
+                        ],
+                        [
+                            147,
+                            179,
+                            207
+                        ],
+                        [
+                            149,
+                            86,
+                            86
+                        ],
+                        [
+                            228,
+                            191,
+                            107
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "event": {
+                "link": "http://www.songkick.com/concerts/39412086-aya-nori-at-pianos?utm_source=59718&utm_medium=partner",
+                "popularity": 0.000004,
+                "status": "cancelled",
+                "date": "2020-04-18T18:00:00-0400",
+                "artist": "Aya Nori",
+                "venue": {
+                    "name": "Pianos",
+                    "link": "http://www.songkick.com/venues/10755-pianos?utm_source=59718&utm_medium=partner"
+                },
+                "location": "New York (NYC), NY, US"
+            },
+            "artist": {
+                "name": "Aya Nori",
+                "id": "6o46BNAxLbKNlm59HFC8IX",
+                "genres": [],
+                "popularity": 1
+            },
+            "tracks": [
+                {
+                    "name": "Young & Offended",
+                    "artist": "Aya Nori",
+                    "album": "Young & Offended",
+                    "art": "https://i.scdn.co/image/ab67616d0000b273176cc32d78b26e49dfc7cbde",
+                    "duration": 217943,
+                    "popularity": 6,
+                    "audio": [
+                        "preview_url"
+                    ],
+                    "colors": [
+                        [
+                            80,
+                            73,
+                            81
+                        ],
+                        [
+                            172,
+                            138,
+                            143
+                        ],
+                        [
+                            131,
+                            114,
+                            121
+                        ],
+                        [
+                            144,
+                            150,
+                            162
+                        ],
+                        [
+                            139,
+                            139,
+                            156
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "event": {
+                "link": "http://www.songkick.com/concerts/39417672-radiator-hospital-at-elsewhere?utm_source=59718&utm_medium=partner",
+                "popularity": 0.005415,
+                "status": "cancelled",
+                "date": "2020-04-18T19:00:00-0400",
+                "artist": "Radiator Hospital",
+                "venue": {
+                    "name": "Elsewhere (The Hall)",
+                    "link": "http://www.songkick.com/venues/3658119-elsewhere?utm_source=59718&utm_medium=partner"
+                },
+                "location": "Brooklyn, NY, US"
+            },
+            "artist": {
+                "name": "Radiator Hospital",
+                "id": "0HMLp79IAd9Z8zMgxqpyxn",
+                "genres": [
+                    "anti-folk",
+                    "grand rapids indie",
+                    "indie garage rock",
+                    "indie punk",
+                    "indie rock",
+                    "lo-fi",
+                    "philly indie"
+                ],
+                "popularity": 45
+            },
+            "tracks": [
+                {
+                    "name": "Our Song",
+                    "artist": "Radiator Hospital",
+                    "album": "Something Wild",
+                    "art": "https://i.scdn.co/image/ab67616d0000b273295c9a242811916a7a2c4733",
+                    "duration": 137871,
+                    "popularity": 49,
+                    "audio": [
+                        "preview_url"
+                    ],
+                    "colors": [
+                        [
+                            209,
+                            174,
+                            117
+                        ],
+                        [
+                            251,
+                            251,
+                            243
+                        ],
+                        [
+                            64,
+                            58,
+                            53
+                        ],
+                        [
+                            173,
+                            85,
+                            67
+                        ],
+                        [
+                            198,
+                            105,
+                            52
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "event": {
+                "link": "http://www.songkick.com/concerts/39422618-desmond-jones-at-arlenes-grocery?utm_source=59718&utm_medium=partner",
+                "popularity": 0.000077,
+                "status": "ok",
+                "date": "2020-04-18T19:30:00-0400",
+                "artist": "Desmond Jones",
+                "venue": {
+                    "name": "Arlene's Grocery",
+                    "link": "http://www.songkick.com/venues/29191-arlenes-grocery?utm_source=59718&utm_medium=partner"
+                },
+                "location": "Manhattan, NY, US"
+            },
+            "artist": {
+                "name": "Desmond Jones",
+                "id": "0UU2zglZ7Rk4v2FIY9OMOv",
+                "genres": [
+                    "grand rapids indie"
+                ],
+                "popularity": 8
+            },
+            "tracks": [
+                {
+                    "name": "Gone",
+                    "artist": "Desmond Jones",
+                    "album": "Thick Cuts",
+                    "art": "https://i.scdn.co/image/ab67616d0000b273ed2e43b078e26a6ae4d7e4a1",
+                    "duration": 405333,
+                    "popularity": 6,
+                    "audio": [
+                        "preview_url"
+                    ],
+                    "colors": [
+                        [
+                            205,
+                            195,
+                            187
+                        ],
+                        [
+                            208,
+                            92,
+                            66
+                        ],
+                        [
+                            196,
+                            172,
+                            110
+                        ],
+                        [
+                            162,
+                            98,
+                            131
+                        ],
+                        [
+                            63,
+                            130,
+                            159
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "event": {
+                "link": "http://www.songkick.com/concerts/39422761-mystic-grizzly-at-knitting-factory-brooklyn?utm_source=59718&utm_medium=partner",
+                "popularity": 0.000068,
+                "status": "ok",
+                "date": "2020-04-18T23:30:00-0400",
+                "artist": "Mystic Grizzly",
+                "venue": {
+                    "name": "Knitting Factory - Brooklyn",
+                    "link": "http://www.songkick.com/venues/664591-knitting-factory-brooklyn?utm_source=59718&utm_medium=partner"
+                },
+                "location": "Brooklyn, NY, US"
+            },
+            "artist": {
+                "name": "Mystic Grizzly",
+                "id": "5KBp5tw7buUpJT7WxNrezV",
+                "genres": [
+                    "experimental bass"
+                ],
+                "popularity": 26
+            },
+            "tracks": [
+                {
+                    "name": "It Never Ends",
+                    "artist": "sfam",
+                    "album": "It Never Ends",
+                    "art": "https://i.scdn.co/image/ab67616d0000b2738d3bbfd4e51b74ecc7cbdd30",
+                    "duration": 227076,
+                    "popularity": 29,
+                    "audio": [
+                        "preview_url"
+                    ],
+                    "colors": [
+                        [
+                            10,
+                            27,
+                            72
+                        ],
+                        [
+                            195,
+                            242,
+                            248
+                        ],
+                        [
+                            45,
+                            203,
+                            247
+                        ],
+                        [
+                            29,
+                            107,
+                            219
+                        ],
+                        [
+                            27,
+                            64,
+                            167
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "event": {
+                "link": "http://www.songkick.com/concerts/39422776-dinah-jane-at-knitting-factory-brooklyn?utm_source=59718&utm_medium=partner",
+                "popularity": 0.003171,
+                "status": "ok",
+                "date": "2020-04-18T20:00:00-0400",
+                "artist": "Dinah Jane",
+                "venue": {
+                    "name": "Knitting Factory - Brooklyn",
+                    "link": "http://www.songkick.com/venues/664591-knitting-factory-brooklyn?utm_source=59718&utm_medium=partner"
+                },
+                "location": "Brooklyn, NY, US"
+            },
+            "artist": {
+                "name": "Dinah Jane",
+                "id": "59KQTERLpPa7M0F25fRH6V",
+                "genres": [
+                    "pop",
+                    "post-teen pop"
+                ],
+                "popularity": 54
+            },
+            "tracks": [
+                {
+                    "name": "Missed A Spot",
+                    "artist": "Dinah Jane",
+                    "album": "Missed A Spot",
+                    "art": "https://i.scdn.co/image/ab67616d0000b27353124c9dc16d8b6a21716426",
+                    "duration": 190010,
+                    "popularity": 57,
+                    "audio": [
+                        "preview_url"
+                    ],
+                    "colors": [
+                        [
+                            35,
+                            33,
+                            39
+                        ],
+                        [
+                            205,
+                            147,
+                            101
+                        ],
+                        [
+                            115,
+                            66,
+                            46
+                        ],
+                        [
+                            134,
+                            140,
+                            125
+                        ],
+                        [
+                            140,
+                            124,
+                            116
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "event": {
+                "link": "http://www.songkick.com/concerts/39432624-spectral-voice-at-saint-vitus?utm_source=59718&utm_medium=partner",
+                "popularity": 0.00023,
+                "status": "ok",
+                "date": "2020-04-18T19:00:00-0400",
+                "artist": "Spectral Voice",
+                "venue": {
+                    "name": "Saint Vitus",
+                    "link": "http://www.songkick.com/venues/1364966-saint-vitus?utm_source=59718&utm_medium=partner"
+                },
+                "location": "Brooklyn, NY, US"
+            },
+            "artist": {
+                "name": "Spectral Voice",
+                "id": "5I4bpzP0gZSVwceopnaoVb",
+                "genres": [
+                    "cavernous death metal",
+                    "post-doom metal",
+                    "voidgaze"
+                ],
+                "popularity": 23
+            },
+            "tracks": [
+                {
+                    "name": "Thresholds Beyond",
+                    "artist": "Spectral Voice",
+                    "album": "Eroded Corridors of Unbeing",
+                    "art": "https://i.scdn.co/image/ab67616d0000b2730971dfe8e79dd13b2d7d0563",
+                    "duration": 439577,
+                    "popularity": 29,
+                    "audio": [
+                        "preview_url"
+                    ],
+                    "colors": [
+                        [
+                            11,
+                            12,
+                            20
+                        ],
+                        [
+                            184,
+                            181,
+                            185
+                        ],
+                        [
+                            91,
+                            82,
+                            98
+                        ],
+                        [
+                            78,
+                            77,
+                            149
+                        ],
+                        [
+                            124,
+                            132,
+                            134
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "event": {
+                "link": "http://www.songkick.com/concerts/39438519-young-nudy-at-paramount?utm_source=59718&utm_medium=partner",
+                "popularity": 0.017918,
+                "status": "ok",
+                "date": "2020-04-18T20:00:00-0400",
+                "artist": "Young Nudy",
+                "venue": {
+                    "name": "The Paramount",
+                    "link": "http://www.songkick.com/venues/1461018-paramount?utm_source=59718&utm_medium=partner"
+                },
+                "location": "Huntington, NY, US"
+            },
+            "artist": {
+                "name": "Young Nudy",
+                "id": "5yPzzu25VzEk8qrGTLIrE1",
+                "genres": [
+                    "atl trap",
+                    "rap",
+                    "southern hip hop",
+                    "trap",
+                    "underground hip hop",
+                    "vapor trap"
+                ],
+                "popularity": 72
+            },
+            "tracks": [
+                {
+                    "name": "The Race - Remix",
+                    "artist": "Tay-K",
+                    "album": "#SantanaWorld (+)",
+                    "art": "https://i.scdn.co/image/ab67616d0000b273fbfeb7ded12a79fbd98f99e8",
+                    "duration": 211875,
+                    "popularity": 65,
+                    "audio": [
+                        "preview_url"
+                    ],
+                    "colors": [
+                        [
+                            48,
+                            49,
+                            52
+                        ],
+                        [
+                            208,
+                            199,
+                            188
+                        ],
+                        [
+                            127,
+                            117,
+                            111
+                        ],
+                        [
+                            146,
+                            162,
+                            156
+                        ],
+                        [
+                            120,
+                            131,
+                            172
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "event": {
+                "link": "http://www.songkick.com/concerts/39438907-grateful-shred-at-brooklyn-bowl?utm_source=59718&utm_medium=partner",
+                "popularity": 0.000081,
+                "status": "ok",
+                "date": "2020-04-18T20:00:00-0400",
+                "artist": "Grateful Shred",
+                "venue": {
+                    "name": "Brooklyn Bowl",
+                    "link": "http://www.songkick.com/venues/493846-brooklyn-bowl?utm_source=59718&utm_medium=partner"
+                },
+                "location": "Brooklyn, NY, US"
+            },
+            "artist": {
+                "name": "Grateful Shred",
+                "id": "44G9mngUyQol4lNhoPIamb",
+                "genres": [],
+                "popularity": 23
+            },
+            "tracks": [
+                {
+                    "name": "Man Smart, Woman Smarter",
+                    "artist": "Grateful Shred",
+                    "album": "Man Smart, Woman Smarter",
+                    "art": "https://i.scdn.co/image/ab67616d0000b273566614ea51cd6f2c541d12fb",
+                    "duration": 351402,
+                    "popularity": 35,
+                    "audio": [
+                        "preview_url"
+                    ],
+                    "colors": [
+                        [
+                            236,
+                            174,
+                            73
+                        ],
+                        [
+                            79,
+                            170,
+                            71
+                        ],
+                        [
+                            42,
+                            36,
+                            31
+                        ],
+                        [
+                            93,
+                            99,
+                            66
+                        ],
+                        [
+                            162,
+                            163,
+                            166
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "event": {
+                "link": "http://www.songkick.com/concerts/39439423-18th-and-addison-at-bowery-electric?utm_source=59718&utm_medium=partner",
+                "popularity": 0.000046,
+                "status": "ok",
+                "date": "2020-04-18T19:00:00-0400",
+                "artist": "18th & Addison",
+                "venue": {
+                    "name": "Bowery Electric",
+                    "link": "http://www.songkick.com/venues/34628-bowery-electric?utm_source=59718&utm_medium=partner"
+                },
+                "location": "New York (NYC), NY, US"
+            },
+            "artist": {
+                "name": "18th-century English",
+                "id": "42o5RTg6KOHbum3zBLGGWW",
+                "genres": [],
+                "popularity": 14
+            }
+        },
+        {
+            "event": {
+                "link": "http://www.songkick.com/concerts/39442126-nito-mestre-at-sobs?utm_source=59718&utm_medium=partner",
+                "popularity": 0.000215,
+                "status": "ok",
+                "date": "2020-04-18T20:00:00-0400",
+                "artist": "Nito Mestre",
+                "venue": {
+                    "name": "S.O.B.'s",
+                    "link": "http://www.songkick.com/venues/48772-sobs?utm_source=59718&utm_medium=partner"
+                },
+                "location": "Manhattan, NY, US"
+            },
+            "artist": {
+                "name": "Nito Mestre",
+                "id": "46JHFFEjLKbXhMQsU5vSGm",
+                "genres": [
+                    "rock nacional"
+                ],
+                "popularity": 30
+            },
+            "tracks": [
+                {
+                    "name": "Superhéroes",
+                    "artist": "Charly García",
+                    "album": "Pubis Angelical / Yendo De La Cama Al Living",
+                    "art": "https://i.scdn.co/image/ab67616d0000b273209f16b555132048defda48a",
+                    "duration": 267653,
+                    "popularity": 39,
+                    "audio": [
+                        "preview_url"
+                    ],
+                    "colors": [
+                        [
+                            35,
+                            30,
+                            31
+                        ],
+                        [
+                            225,
+                            145,
+                            104
+                        ],
+                        [
+                            169,
+                            60,
+                            50
+                        ],
+                        [
+                            140,
+                            148,
+                            151
+                        ],
+                        [
+                            133,
+                            140,
+                            152
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "event": {
+                "link": "http://www.songkick.com/concerts/39445919-warren-wolf-at-jazz-standard?utm_source=59718&utm_medium=partner",
+                "popularity": 0.000151,
+                "status": "cancelled",
+                "date": "2020-04-18T19:30:00-0400",
+                "artist": "Warren Wolf",
+                "venue": {
+                    "name": "Jazz Standard",
+                    "link": "http://www.songkick.com/venues/217-jazz-standard?utm_source=59718&utm_medium=partner"
+                },
+                "location": "New York (NYC), NY, US"
+            },
+            "artist": {
+                "name": "Warren Wolf",
+                "id": "3ib2oPht9T5y9kjQm3h1Lu",
+                "genres": [
+                    "jazz vibraphone"
+                ],
+                "popularity": 22
+            },
+            "tracks": [
+                {
+                    "name": "Come and Dance with Me",
+                    "artist": "Warren Wolf",
+                    "album": "Reincarnation",
+                    "art": "https://i.scdn.co/image/ab67616d0000b2739049f9c83ed082a3dbbd29c1",
+                    "duration": 217525,
+                    "popularity": 25,
+                    "audio": [
+                        "preview_url"
+                    ],
+                    "colors": [
+                        [
+                            177,
+                            165,
+                            157
+                        ],
+                        [
+                            18,
+                            14,
+                            13
+                        ],
+                        [
+                            115,
+                            40,
+                            42
+                        ],
+                        [
+                            137,
+                            90,
+                            70
+                        ],
+                        [
+                            114,
+                            102,
+                            96
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "event": {
+                "link": "http://www.songkick.com/concerts/39460864-daddy-long-legs-at-tv-eye?utm_source=59718&utm_medium=partner",
+                "popularity": 0.000502,
+                "status": "ok",
+                "date": "2020-04-18T20:00:00-0400",
+                "artist": "Daddy Long Legs",
+                "venue": {
+                    "name": "Tv Eye",
+                    "link": "http://www.songkick.com/venues/4369313-tv-eye?utm_source=59718&utm_medium=partner"
+                },
+                "location": "Ridgewood, NY, US"
+            },
+            "artist": {
+                "name": "DADDY LONG LEGS",
+                "id": "26vp0YsAVautrWTzJXf6Zi",
+                "genres": [],
+                "popularity": 25
+            },
+            "tracks": [
+                {
+                    "name": "Long John's Jump",
+                    "artist": "DADDY LONG LEGS",
+                    "album": "Blood from a Stone",
+                    "art": "https://i.scdn.co/image/ab67616d0000b273dc3aa1c4f66c7afcacdf7e80",
+                    "duration": 158453,
+                    "popularity": 23,
+                    "audio": [
+                        "preview_url"
+                    ],
+                    "colors": [
+                        [
+                            174,
+                            126,
+                            66
+                        ],
+                        [
+                            45,
+                            32,
+                            21
+                        ],
+                        [
+                            99,
+                            50,
+                            30
+                        ],
+                        [
+                            235,
+                            224,
+                            193
+                        ],
+                        [
+                            233,
+                            203,
+                            135
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "event": {
+                "link": "http://www.songkick.com/concerts/39464072-breakbot-at-elsewhere?utm_source=59718&utm_medium=partner",
+                "popularity": 0.042954,
+                "status": "ok",
+                "date": "2020-04-18T22:30:00-0400",
+                "artist": "BreakBot",
+                "venue": {
+                    "name": "Elsewhere (The Hall)",
+                    "link": "http://www.songkick.com/venues/3658119-elsewhere?utm_source=59718&utm_medium=partner"
+                },
+                "location": "Brooklyn, NY, US"
+            },
+            "artist": {
+                "name": "Breakbot",
+                "id": "0iui2Be5CP8EWxvHYsVspL",
+                "genres": [
+                    "alternative dance",
+                    "disco house",
+                    "filter house",
+                    "new rave",
+                    "nu disco"
+                ],
+                "popularity": 64
+            },
+            "tracks": [
+                {
+                    "name": "Baby I'm Yours - feat. Irfrane",
+                    "artist": "Breakbot",
+                    "album": "By Your Side",
+                    "art": "https://i.scdn.co/image/ab67616d0000b27367deeb507eb67cf619b5cbde",
+                    "duration": 215786,
+                    "popularity": 60,
+                    "audio": [
+                        "preview_url"
+                    ],
+                    "colors": [
+                        [
+                            114,
+                            71,
+                            54
+                        ],
+                        [
+                            214,
+                            210,
+                            206
+                        ],
+                        [
+                            151,
+                            153,
+                            158
+                        ],
+                        [
+                            188,
+                            152,
+                            134
+                        ],
+                        [
+                            45,
+                            26,
+                            21
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "event": {
+                "link": "http://www.songkick.com/concerts/39465114-melissa-aldana-at-jazz-gallery?utm_source=59718&utm_medium=partner",
+                "popularity": 0.001349,
+                "status": "ok",
+                "date": "2020-04-18T19:00:00-0400",
+                "artist": "Melissa Aldana",
+                "venue": {
+                    "name": "Jazz Gallery",
+                    "link": "http://www.songkick.com/venues/31623-jazz-gallery?utm_source=59718&utm_medium=partner"
+                },
+                "location": "New York (NYC), NY, US"
+            },
+            "artist": {
+                "name": "Melissa Aldana",
+                "id": "56qrzp61GEif1i0UjqkHrz",
+                "genres": [
+                    "jazz chileno"
+                ],
+                "popularity": 22
+            },
+            "tracks": [
+                {
+                    "name": "Free Fall",
+                    "artist": "Melissa Aldana",
+                    "album": "Free Fall",
+                    "art": "https://i.scdn.co/image/ab67616d0000b273acbf18d1b25dbc46c5f21c3d",
+                    "duration": 425560,
+                    "popularity": 17,
+                    "audio": [
+                        "preview_url"
+                    ],
+                    "colors": [
+                        [
+                            222,
+                            215,
+                            205
+                        ],
+                        [
+                            33,
+                            32,
+                            30
+                        ],
+                        [
+                            146,
+                            63,
+                            59
+                        ],
+                        [
+                            5,
+                            174,
+                            216
+                        ],
+                        [
+                            165,
+                            130,
+                            86
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "event": {
+                "link": "http://www.songkick.com/concerts/39468753-eilen-jewell-at-loft-at-city-winery?utm_source=59718&utm_medium=partner",
+                "popularity": 0.00351,
+                "status": "ok",
+                "date": null,
+                "artist": "Eilen Jewell",
+                "venue": {
+                    "name": "The Loft at City Winery",
+                    "link": "http://www.songkick.com/venues/3874104-loft-at-city-winery?utm_source=59718&utm_medium=partner"
+                },
+                "location": "New York (NYC), NY, US"
+            },
+            "artist": {
+                "name": "Eilen Jewell",
+                "id": "7caMdiwqwg1WefL7Jjm23M",
+                "genres": [
+                    "alternative country",
+                    "country rock",
+                    "folk",
+                    "indie folk",
+                    "new americana",
+                    "roots rock",
+                    "traditional folk"
+                ],
+                "popularity": 42
+            },
+            "tracks": [
+                {
+                    "name": "Mess Around",
+                    "artist": "Eilen Jewell",
+                    "album": "Boundary County",
+                    "art": "https://i.scdn.co/image/ab67616d0000b273c7714103133159e37e731191",
+                    "duration": 264106,
+                    "popularity": 36,
+                    "audio": [
+                        "preview_url"
+                    ],
+                    "colors": [
+                        [
+                            202,
+                            204,
+                            219
+                        ],
+                        [
+                            46,
+                            48,
+                            58
+                        ],
+                        [
+                            129,
+                            137,
+                            164
+                        ],
+                        [
+                            147,
+                            156,
+                            179
+                        ],
+                        [
+                            109,
+                            117,
+                            141
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "event": {
+                "link": "http://www.songkick.com/concerts/39470423-jordan-siwek-at-petes-candy-store?utm_source=59718&utm_medium=partner",
+                "popularity": 0.000004,
+                "status": "ok",
+                "date": "2020-04-18T16:00:00-0400",
+                "artist": "Jordan Siwek",
+                "venue": {
+                    "name": "Pete's Candy Store",
+                    "link": "http://www.songkick.com/venues/37914-petes-candy-store?utm_source=59718&utm_medium=partner"
+                },
+                "location": "Brooklyn, NY, US"
+            },
+            "artist": {
+                "name": "Jordan Siwek",
+                "id": "0bn9ZN6yr7EUIGzrvT47j4",
+                "genres": [],
+                "popularity": 2
+            },
+            "tracks": [
+                {
+                    "name": "Can We Go Back",
+                    "artist": "Jordan Siwek",
+                    "album": "Sun Inside You",
+                    "art": "https://i.scdn.co/image/ab67616d0000b273d7d21972fa49b1a08d07aa4f",
+                    "duration": 216746,
+                    "popularity": 8,
+                    "audio": [
+                        "preview_url"
+                    ],
+                    "colors": [
+                        [
+                            52,
+                            41,
+                            25
+                        ],
+                        [
+                            221,
+                            200,
+                            159
+                        ],
+                        [
+                            77,
+                            134,
+                            163
+                        ],
+                        [
+                            151,
+                            121,
+                            81
+                        ],
+                        [
+                            163,
+                            175,
+                            169
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "event": {
+                "link": "http://www.songkick.com/concerts/39471432-winona-forever-at-our-wicked-lady?utm_source=59718&utm_medium=partner",
+                "popularity": 0.001234,
+                "status": "ok",
+                "date": null,
+                "artist": "Winona Forever",
+                "venue": {
+                    "name": "Our Wicked Lady",
+                    "link": "http://www.songkick.com/venues/3047394-our-wicked-lady?utm_source=59718&utm_medium=partner"
+                },
+                "location": "Brooklyn, NY, US"
+            },
+            "artist": {
+                "name": "Winona Forever",
+                "id": "3ZwhWiGw3XTJThOjEmuFAT",
+                "genres": [
+                    "indie garage rock"
+                ],
+                "popularity": 37
+            },
+            "tracks": [
+                {
+                    "name": "Keep Kool",
+                    "artist": "Winona Forever",
+                    "album": "Keep Kool",
+                    "art": "https://i.scdn.co/image/ab67616d0000b273dd9fb3c479bacf4f0fc1827d",
+                    "duration": 144018,
+                    "popularity": 44,
+                    "audio": [
+                        "preview_url"
+                    ],
+                    "colors": [
+                        [
+                            177,
+                            65,
+                            42
+                        ],
+                        [
+                            53,
+                            35,
+                            29
+                        ],
+                        [
+                            242,
+                            220,
+                            121
+                        ],
+                        [
+                            201,
+                            174,
+                            153
+                        ],
+                        [
+                            203,
+                            155,
+                            90
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "event": {
+                "link": "http://www.songkick.com/concerts/39472892-squarewon-at-rockwood-music-hall?utm_source=59718&utm_medium=partner",
+                "popularity": 0.000002,
+                "status": "ok",
+                "date": "2020-04-18T20:30:00-0400",
+                "artist": "SquareWon",
+                "venue": {
+                    "name": "Rockwood Music Hall",
+                    "link": "http://www.songkick.com/venues/34514-rockwood-music-hall?utm_source=59718&utm_medium=partner"
+                },
+                "location": "New York (NYC), NY, US"
+            },
+            "artist": {
+                "name": "Squarewon",
+                "id": "1ouidS3Uk4tsJeAxvHp8Rt",
+                "genres": [],
+                "popularity": 0
+            },
+            "tracks": [
+                {
+                    "name": "Tired",
+                    "artist": "Squarewon",
+                    "album": "Tired",
+                    "art": "https://i.scdn.co/image/ab67616d0000b273c3c3461056bb75cd286e40fc",
+                    "duration": 333552,
+                    "popularity": 1,
+                    "audio": [
+                        "preview_url"
+                    ],
+                    "colors": [
+                        [
+                            21,
+                            80,
+                            93
+                        ],
+                        [
+                            220,
+                            183,
+                            68
+                        ],
+                        [
+                            133,
+                            50,
+                            41
+                        ],
+                        [
+                            102,
+                            114,
+                            88
+                        ],
+                        [
+                            197,
+                            217,
+                            200
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "event": {
+                "link": "http://www.songkick.com/concerts/39478937-gareth-emery-at-marquee-new-york?utm_source=59718&utm_medium=partner",
+                "popularity": 0.030101,
+                "status": "ok",
+                "date": null,
+                "artist": "Gareth Emery",
+                "venue": {
+                    "name": "Marquee, New York",
+                    "link": "http://www.songkick.com/venues/3274389-marquee-new-york?utm_source=59718&utm_medium=partner"
+                },
+                "location": "New York (NYC), NY, US"
+            },
+            "artist": {
+                "name": "Gareth Emery",
+                "id": "0hprEC0nsWuQPSHag1O2Vi",
+                "genres": [
+                    "big room",
+                    "edm",
+                    "progressive electro house",
+                    "progressive house",
+                    "progressive trance",
+                    "trance",
+                    "uplifting trance"
+                ],
+                "popularity": 65
+            },
+            "tracks": [
+                {
+                    "name": "You Are",
+                    "artist": "Gareth Emery",
+                    "album": "You Are",
+                    "art": "https://i.scdn.co/image/ab67616d0000b273eec89dc3811b18914ccf4498",
+                    "duration": 192026,
+                    "popularity": 58,
+                    "audio": [
+                        "preview_url"
+                    ],
+                    "colors": [
+                        [
+                            214,
+                            168,
+                            86
+                        ],
+                        [
+                            48,
+                            34,
+                            53
+                        ],
+                        [
+                            195,
+                            111,
+                            55
+                        ],
+                        [
+                            125,
+                            48,
+                            41
+                        ],
+                        [
+                            142,
+                            126,
+                            108
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "event": {
+                "link": "http://www.songkick.com/concerts/39482821-todd-terry-at-avant-gardner?utm_source=59718&utm_medium=partner",
+                "popularity": 0.008466,
+                "status": "cancelled",
+                "date": "2020-04-18T19:00:00-0400",
+                "artist": "Todd Terry",
+                "venue": {
+                    "name": "Avant Gardner",
+                    "link": "http://www.songkick.com/venues/3689859-avant-gardner?utm_source=59718&utm_medium=partner"
+                },
+                "location": "Brooklyn, NY, US"
+            },
+            "artist": {
+                "name": "Todd Terry",
+                "id": "3dE92yGWcrboP1kC5SWyqu",
+                "genres": [
+                    "chicago house",
+                    "deep groove house",
+                    "deep house",
+                    "disco house",
+                    "diva house",
+                    "funky tech house",
+                    "hip house",
+                    "house",
+                    "tech house",
+                    "tribal house",
+                    "vocal house"
+                ],
+                "popularity": 55
+            },
+            "tracks": [
+                {
+                    "name": "Missing - Todd Terry Club Mix / US Radio Edit",
+                    "artist": "Everything But The Girl",
+                    "album": "Amplified Heart",
+                    "art": "https://i.scdn.co/image/ab67616d0000b273aed21dc4c18a1568cd2f4b6a",
+                    "duration": 249533,
+                    "popularity": 58,
+                    "audio": [
+                        "preview_url"
+                    ],
+                    "colors": [
+                        [
+                            226,
+                            217,
+                            198
+                        ],
+                        [
+                            134,
+                            66,
+                            27
+                        ],
+                        [
+                            29,
+                            14,
+                            10
+                        ],
+                        [
+                            170,
+                            121,
+                            61
+                        ],
+                        [
+                            128,
+                            119,
+                            118
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "event": {
+                "link": "http://www.songkick.com/concerts/39489247-strangepride-at-lola?utm_source=59718&utm_medium=partner",
+                "popularity": 0.000108,
+                "status": "ok",
+                "date": "2020-04-18T19:00:00-0400",
+                "artist": "STRANGEPRIDE",
+                "venue": {
+                    "name": "Lola",
+                    "link": "http://www.songkick.com/venues/4357310-lola?utm_source=59718&utm_medium=partner"
+                },
+                "location": "New York (NYC), NY, US"
+            },
+            "artist": {
+                "name": "Strangepride",
+                "id": "4ON9M4SBKDgkwq8qt47XLm",
+                "genres": [],
+                "popularity": 4
+            },
+            "tracks": [
+                {
+                    "name": "Adirondack",
+                    "artist": "Strangepride",
+                    "album": "We'll Take It from Here",
+                    "art": "https://i.scdn.co/image/ab67616d0000b2738f6679d005133933ba59c19f",
+                    "duration": 356490,
+                    "popularity": 9,
+                    "audio": [
+                        "preview_url"
+                    ],
+                    "colors": [
+                        [
+                            231,
+                            145,
+                            7
+                        ],
+                        [
+                            67,
+                            43,
+                            29
+                        ],
+                        [
+                            143,
+                            70,
+                            14
+                        ],
+                        [
+                            163,
+                            92,
+                            5
+                        ],
+                        [
+                            44,
+                            36,
+                            52
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "event": {
+                "link": "http://www.songkick.com/concerts/39490201-bardo-pond-at-mercury-lounge?utm_source=59718&utm_medium=partner",
+                "popularity": 0.002557,
+                "status": "ok",
+                "date": "2020-04-18T21:30:00-0400",
+                "artist": "Bardo Pond",
+                "venue": {
+                    "name": "Mercury Lounge",
+                    "link": "http://www.songkick.com/venues/364-mercury-lounge?utm_source=59718&utm_medium=partner"
+                },
+                "location": "New York (NYC), NY, US"
+            },
+            "artist": {
+                "name": "Bardo Pond",
+                "id": "2ZHNwvYaMbD8zuObAXVHEr",
+                "genres": [
+                    "experimental",
+                    "experimental rock",
+                    "new weird america",
+                    "philly indie",
+                    "psychedelic space rock",
+                    "shoegaze",
+                    "slow core"
+                ],
+                "popularity": 26
+            },
+            "tracks": [
+                {
+                    "name": "Tommy Gun Angel",
+                    "artist": "Bardo Pond",
+                    "album": "Lapsed",
+                    "art": "https://i.scdn.co/image/ab67616d0000b2735d563c7d5f70fbcac7cc4afc",
+                    "duration": 315666,
+                    "popularity": 25,
+                    "audio": [
+                        "preview_url"
+                    ],
+                    "colors": [
+                        [
+                            190,
+                            181,
+                            166
+                        ],
+                        [
+                            64,
+                            63,
+                            60
+                        ],
+                        [
+                            126,
+                            122,
+                            110
+                        ],
+                        [
+                            108,
+                            99,
+                            89
+                        ],
+                        [
+                            113,
+                            108,
+                            83
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "event": {
+                "link": "http://www.songkick.com/concerts/39487491-arrows-in-action-at-muchmores?utm_source=59718&utm_medium=partner",
+                "popularity": 0.000069,
+                "status": "cancelled",
+                "date": "2020-04-18T21:00:00-0400",
+                "artist": "Arrows In Action",
+                "venue": {
+                    "name": "Muchmore's",
+                    "link": "http://www.songkick.com/venues/1905273-muchmores?utm_source=59718&utm_medium=partner"
+                },
+                "location": "Brooklyn, NY, US"
+            },
+            "artist": {
+                "name": "Arrows in Action",
+                "id": "467o5z7PYxbXFAGA0mvhAQ",
+                "genres": [
+                    "gainesville indie"
+                ],
+                "popularity": 31
+            },
+            "tracks": [
+                {
+                    "name": "This Time",
+                    "artist": "Arrows in Action",
+                    "album": "This Time",
+                    "art": "https://i.scdn.co/image/ab67616d0000b273e64900cbbea0f4afe403c664",
+                    "duration": 168831,
+                    "popularity": 37,
+                    "audio": [
+                        "preview_url"
+                    ],
+                    "colors": [
+                        [
+                            178,
+                            177,
+                            178
+                        ],
+                        [
+                            54,
+                            55,
+                            54
+                        ],
+                        [
+                            102,
+                            103,
+                            103
+                        ],
+                        [
+                            104,
+                            70,
+                            99
+                        ],
+                        [
+                            88,
+                            90,
+                            74
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "event": {
+                "link": "http://www.songkick.com/concerts/39494957-stella-ruze-at-rockwood-music-hall-stage-1?utm_source=59718&utm_medium=partner",
+                "popularity": 0.000011,
+                "status": "ok",
+                "date": "2020-04-18T17:00:00-0400",
+                "artist": "Stella Ruze",
+                "venue": {
+                    "name": "Rockwood Music Hall Stage 1",
+                    "link": "http://www.songkick.com/venues/1532403-rockwood-music-hall-stage-1?utm_source=59718&utm_medium=partner"
+                },
+                "location": "New York (NYC), NY, US"
+            },
+            "artist": {
+                "name": "Stella Ruze",
+                "id": "1SdE5YPBRJHgW3NMwgsMMF",
+                "genres": [],
+                "popularity": 6
+            },
+            "tracks": [
+                {
+                    "name": "Travel Song",
+                    "artist": "Stella Ruze",
+                    "album": "The Greater Dog",
+                    "art": "https://i.scdn.co/image/ab67616d0000b2733f7b39f051a8fc583419c17a",
+                    "duration": 208127,
+                    "popularity": 6,
+                    "audio": [
+                        "preview_url"
+                    ],
+                    "colors": [
+                        [
+                            50,
+                            37,
+                            31
+                        ],
+                        [
+                            229,
+                            177,
+                            136
+                        ],
+                        [
+                            79,
+                            124,
+                            152
+                        ],
+                        [
+                            151,
+                            166,
+                            167
+                        ],
+                        [
+                            207,
+                            61,
+                            65
+                        ]
+                    ]
+                }
+            ]
+        }
+    ]
+}

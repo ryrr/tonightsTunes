@@ -1,5 +1,6 @@
 const config = require('./config.json')
 const got = require('got')
+const ColorThief = require('colorthief');
 
 exports.getToken = async () => {
     console.log('getting token....')
@@ -44,7 +45,6 @@ exports.getArtistInfo = async (artist, token) => {
     try {
         let resp = await got(artistQuery, { headers: headers });
         result = JSON.parse(resp.body)
-        console.log(result)
         if (result.artists.items) {
             if (result.artists.items[0]) {
                 artistObj = {
@@ -74,21 +74,26 @@ exports.getNearbyArtists = async (locationObj, token) => {
         let resp = await got(eventQuery)
         result = JSON.parse(resp.body)
         let rawEvents = result.resultsPage.results.event
+        //console.log(rawEvents)
         let events = []
         for (let event of rawEvents) {
-            artistObj = await this.getArtistInfo(event.performance[0].artist.displayName, token)
-            if (artistObj) {
-                eventObj = {
-                    event: {
-                        link: event.uri,
-                        popularity: event.popularity,
-                        status: event.status,
-                        date: event.start.date,
-                        artist: event.performance[0].artist.displayName
-                    },
-                    artist: artistObj
+            if (event.performance[0]) {
+                artistObj = await this.getArtistInfo(event.performance[0].artist.displayName, token)
+                if (artistObj) {
+                    eventObj = {
+                        event: {
+                            link: event.uri,
+                            popularity: event.popularity,
+                            status: event.status,
+                            date: event.start.datetime,
+                            artist: event.performance[0].artist.displayName,
+                            venue: { name: event.venue.displayName, link: event.venue.uri },
+                            location: event.location.city,
+                        },
+                        artist: artistObj
+                    }
+                    events.push(eventObj)
                 }
-                events.push(eventObj)
             }
         }
         let eventsObj = { events: events }
@@ -109,10 +114,20 @@ exports.getTracks = async (artistObj, token) => {
                 let resp = await got(trackQuery, { headers: headers })
                 let result = JSON.parse(resp.body)
                 let tracks = []
+                /*
                 for (let track of result.tracks) {
-                    let trackObj = { name: track['name'], artist: track['album']['artists'][0]['name'], album: track['album']['name'], art: track['album']['images'][0]['url'], duration: track['duration_ms'], popularity: track['popularity'], audio: ['preview_url'] }
+                    let artURL = track['album']['images'][0]['url']
+                    let colors = await ColorThief.getPalette(artURL, 5)
+                    let trackObj = { name: track['name'], artist: track['album']['artists'][0]['name'], album: track['album']['name'], art: track['album']['images'][0]['url'], duration: track['duration_ms'], popularity: track['popularity'], audio: ['preview_url'], colors: colors }
                     tracks.push(trackObj)
                 }
+                */
+                let track = result.tracks[0]
+                let artURL = track['album']['images'][0]['url']
+                let colors = await ColorThief.getPalette(artURL, 5)
+                console.log(colors)
+                let trackObj = { name: track['name'], artist: track['album']['artists'][0]['name'], album: track['album']['name'], art: track['album']['images'][0]['url'], duration: track['duration_ms'], popularity: track['popularity'], audio: ['preview_url'], colors: colors }
+                tracks.push(trackObj)
                 obj['tracks'] = tracks
             }
             catch (error) { console.log(error) }
