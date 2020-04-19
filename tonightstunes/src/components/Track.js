@@ -1,16 +1,28 @@
 import React, { useState, useEffect } from 'react';
+import { StyleSheet, css } from 'aphrodite';
 let Track = (props) => {
     const [type, setType] = useState(true)
     const handleTrackClick = e => {
         setType(!type)
     }
+    const handleMouseover = e => {
+        props.handleMouseover(props.index)
+    }
+    const primaryColor = props.primaryColor
+    const secondaryColor = props.secondaryColor
+    const styles = StyleSheet.create({
+        detailColor: {
+            color: props.detailColor
+        }
+    })
+
     if (type === true) {
         return (
-            <div className='track'>
+            <div className='track' style={{ backgroundColor: primaryColor, borderBottom: 'solid ' + primaryColor }}>
                 <div className='albumArt hvr-grow'>
-                    <img src={props.art} className='albumArt' />
+                    <img src={props.art} className='albumArt' onClick={handleMouseover} />
                 </div>
-                <div className='trackInfo' onClick={handleTrackClick}>
+                <div className='trackInfo' onClick={handleTrackClick} style={{ color: secondaryColor }}>
                     <h4 className='trackName'>{props.name}</h4>
                     <div className='trackName2'>
                         <h5 className='trackArtist'>{props.artist}</h5>
@@ -22,19 +34,18 @@ let Track = (props) => {
     }
     else {
         return (
-            <div className='track'>
+            <div className='track' style={{ backgroundColor: primaryColor, borderBottom: 'solid ' + primaryColor }}>
                 <div className='albumArt hvr-grow'>
-                    <img src={props.art} className='albumArt' />
+                    <img src={props.art} className='albumArt' onClick={handleMouseover} />
                 </div>
-                <div className='eventInfo' onClick={handleTrackClick}>
-                    <p className='eventText'>
-                        <p><b>{props.artist}</b> @ {props.venue}</p>
-                        <p>{props.location}:{props.time}</p>
-                    </p>
-                </div>
-            </div>
+                <div className='eventInfo' onClick={handleTrackClick} style={{ color: secondaryColor }}>
+                    <p><b className={css(styles.detailColor)}>{props.artist}</b> @ <b className={css(styles.detailColor)}>{props.venue}</b></p>
+                    <p><b className={css(styles.detailColor)}>{props.date}</b> in <b className={css(styles.detailColor)}>{props.location}</b></p>
+                </div >
+            </div >
         )
     }
 }
+
 
 export default Track

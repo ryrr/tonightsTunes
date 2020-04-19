@@ -8,8 +8,9 @@ let Input = (props) => {
     const [animation, setAnimation] = useState(null)
     const [v, setV] = useState(true)
     const [tracks, setTracks] = useState([]);
+    const [audioPlayer] = useState(new Audio());
     const [selectedTrack, setSelectedTrack] = useState(-1);
-    const testData = require('../util/testData.json')
+    const testData = require('../util/testDataAudio.json')
 
     let locationSubmit = (e) => {
         e.preventDefault()
@@ -55,12 +56,22 @@ let Input = (props) => {
         setTracks(newTracks)
     }
 
-    const handleTrackClick = (trackNum) => {
-        console.log(trackNum)
+
+    const handleMouseover = (trackNum) => {
         if (trackNum === selectedTrack) {
+            audioPlayer.pause();
             setSelectedTrack(-1);
         }
         else {
+            const newSource = tracks[trackNum].track.audio;
+            console.log(newSource)
+            if (newSource === null)
+                audioPlayer.pause();
+            else {
+                audioPlayer.src = newSource
+                audioPlayer.play()
+            }
+
             setSelectedTrack(trackNum);
         }
     }
@@ -70,6 +81,23 @@ let Input = (props) => {
         var minutes = Math.floor(millis / 60000);
         var seconds = ((millis % 60000) / 1000).toFixed(0);
         return minutes + ":" + (seconds < 10 ? '0' : '') + seconds;
+    }
+
+    const rgbToHex = (r, g, b) => '#' + [r, g, b].map(x => {
+        const hex = x.toString(16)
+        return hex.length === 1 ? '0' + hex : hex
+    }).join('')
+
+    function formatDate(dateStr) {
+        let date = new Date(dateStr)
+        let hours = date.getHours();
+        let minutes = date.getMinutes();
+        let ampm = hours >= 12 ? 'pm' : 'am';
+        hours = hours % 12;
+        hours = hours ? hours : 12; // the hour '0' should be '12'
+        minutes = minutes < 10 ? '0' + minutes : minutes;
+        let strTime = hours + ':' + minutes + ' ' + ampm;
+        return (date.getMonth() + 1) + "/" + date.getDate() + " @ " + strTime;
     }
 
     const createTracks = () => {
@@ -85,12 +113,15 @@ let Input = (props) => {
                         duration={obj.track.duration}
                         art={obj.track.art}
                         selected={(index === selectedTrack) ? true : false}
-                        handleTrackClick={handleTrackClick}
+                        handleMouseover={handleMouseover}
                         audio={obj.track.audio}
                         venue={obj.event.venue ? obj.event.venue['name'] : '?'}
                         venueLink={obj.event.venue ? obj.event.venue['link'] : '/'}
+                        date={obj.event.date ? formatDate(obj.event.date) : 'unknown date'}
                         location={obj.event.location}
-
+                        primaryColor={rgbToHex(obj.track.colors[0][0], obj.track.colors[0][1], obj.track.colors[0][2])}
+                        secondaryColor={rgbToHex(obj.track.colors[1][0], obj.track.colors[1][1], obj.track.colors[1][2])}
+                        detailColor={rgbToHex(obj.track.colors[2][0], obj.track.colors[2][1], obj.track.colors[2][2])}
                     />
                 ))
             }
