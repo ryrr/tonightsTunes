@@ -35,13 +35,13 @@ let Input = (props) => {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)
         };
-        /*
+
         fetch('http://localhost:3001/nearby', requestOptions)
             .then(response => response.json())
             .then(data => processData(data));
-        */
+
         //console.log(testData)
-        processData(testData)
+        //processData(testData)
     }
     const processData = data => {
         let newTracks = []
@@ -53,10 +53,20 @@ let Input = (props) => {
                 }
             }
         }
+        newTracks = shuffle(newTracks)
         setTracks(newTracks)
     }
 
-
+    function shuffle(a) {
+        var j, x, i;
+        for (i = a.length - 1; i > 0; i--) {
+            j = Math.floor(Math.random() * (i + 1));
+            x = a[i];
+            a[i] = a[j];
+            a[j] = x;
+        }
+        return a;
+    }
     const handleMouseover = (trackNum) => {
         if (trackNum === selectedTrack) {
             audioPlayer.pause();

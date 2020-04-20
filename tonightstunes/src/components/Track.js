@@ -25,11 +25,11 @@ let Track = (props) => {
                 <div className='trackInfo' onClick={handleTrackClick} style={{ color: secondaryColor }}>
                     <h4 className='trackName'>{props.name}</h4>
                     <div className='trackName2'>
-                        <h5 className='trackArtist'>{props.artist}</h5>
-                        <h5 className='trackLength'>{props.duration}</h5>
+                        <p className='trackArtist'>{props.artist}</p>
+                        <p className='trackLength'>{props.duration}</p>
                     </div>
                 </div>
-            </div>
+            </div >
         )
     }
     else {
@@ -39,8 +39,8 @@ let Track = (props) => {
                     <img src={props.art} className='albumArt' onClick={handleMouseover} />
                 </div>
                 <div className='eventInfo' onClick={handleTrackClick} style={{ color: secondaryColor }}>
-                    <p><b className={css(styles.detailColor)}>{props.artist}</b> @ <b className={css(styles.detailColor)}>{props.venue}</b></p>
-                    <p><b className={css(styles.detailColor)}>{props.date}</b> in <b className={css(styles.detailColor)}>{props.location}</b></p>
+                    <p className='info overflow'><b className={css(styles.detailColor)}>{props.artist}</b> @ <b className={css(styles.detailColor)}>{props.venue}</b></p>
+                    <p className='info overflow'><b className={css(styles.detailColor)}>{props.date}</b> in <b className={css(styles.detailColor)}>{props.location}</b></p>
                 </div >
             </div >
         )

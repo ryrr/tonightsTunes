@@ -28,6 +28,14 @@ app.post('/nearby', async (req, res) => {
         let locationResp = await logic.getLocationID(req.body.location)
         let artistsResp = await logic.getNearbyArtists(locationResp, req.body.token)
         let tracksResp = await logic.getTracks(artistsResp, req.body.token)
+
+        fs.writeFile("./testData.json", JSON.stringify(tracksResp), (err) => {
+            if (err) {
+                console.error(err);
+                return;
+            };
+            console.log("File has been created");
+        });
         res.send(tracksResp)
     }
     catch (error) { console.log(error) }
