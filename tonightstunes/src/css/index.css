@@ -25,6 +25,21 @@
 .spotifyBttn{
     display: none;
 }
+.trackContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.settingsIco{
+    color:#63585E;
+    margin-bottom: 30px;
+}
+.settings{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .track{
     width: 100%;
     border-radius: 20px;
@@ -64,15 +79,6 @@
     color:black;
     cursor: pointer;
 }
-/*
-.info{
-    text-overflow: ellipsis;
-}
-.overflow{
-    white-space: nowrap;
-    overflow: hidden;
-}
-*/
 .eventText{
     line-height: 20px;
 }

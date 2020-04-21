@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 let Heading = (props) => {
     return (
         <div className='heading'>

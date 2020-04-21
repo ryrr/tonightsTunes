@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './css/index.css';
 import './css/hover-min.css';
 import Input from './components/Input.js'
-import Track from './components/Track.js'
+//import Track from './components/Track.js'
 import Heading from './components/Heading.js'
 
 

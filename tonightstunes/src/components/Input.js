@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, css } from 'aphrodite';
 import { bounceOutLeft } from 'react-animations';
 import Autocomplete from "./Autocomplete";
 import Track from './Track.js'
+import Filters from './Filters'
 
 let Input = (props) => {
     const [animation, setAnimation] = useState(null)
@@ -10,17 +11,17 @@ let Input = (props) => {
     const [tracks, setTracks] = useState([]);
     const [audioPlayer] = useState(new Audio());
     const [selectedTrack, setSelectedTrack] = useState(-1);
-    const testData = require('../util/testDataAudio.json')
+    //const testData = require('../util/testDataAudio.json')
 
     let locationSubmit = (e) => {
         e.preventDefault()
         setAnimation('bounceOutLeft')
         setV(false)
-        /*
+
         setTimeout(function () {
             setAnimation(null)
         }, 900);
-        */
+
         fetchTracks(e.target[0].value)
     }
 
@@ -74,7 +75,7 @@ let Input = (props) => {
         }
         else {
             const newSource = tracks[trackNum].track.audio;
-            console.log(newSource)
+            //console.log(newSource)
             if (newSource === null)
                 audioPlayer.pause();
             else {
@@ -166,7 +167,9 @@ let Input = (props) => {
     }
     else {
         return (
+
             <div className='trackContainer'>
+                <Filters></Filters>
                 {v ? null : createTracks()}
             </div>
         )

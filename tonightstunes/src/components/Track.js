@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, css } from 'aphrodite';
 let Track = (props) => {
     const [type, setType] = useState(true)
@@ -20,7 +20,7 @@ let Track = (props) => {
         return (
             <div className='track' style={{ backgroundColor: primaryColor, borderBottom: 'solid ' + primaryColor }}>
                 <div className='albumArt hvr-grow'>
-                    <img src={props.art} className='albumArt' onClick={handleMouseover} />
+                    <img src={props.art} alt='bah' className='albumArt' onClick={handleMouseover} />
                 </div>
                 <div className='trackInfo' onClick={handleTrackClick} style={{ color: secondaryColor }}>
                     <h4 className='trackName'>{props.name}</h4>
@@ -36,7 +36,7 @@ let Track = (props) => {
         return (
             <div className='track' style={{ backgroundColor: primaryColor, borderBottom: 'solid ' + primaryColor }}>
                 <div className='albumArt hvr-grow'>
-                    <img src={props.art} className='albumArt' onClick={handleMouseover} />
+                    <img src={props.art} alt='bah' className='albumArt' onClick={handleMouseover} />
                 </div>
                 <div className='eventInfo' onClick={handleTrackClick} style={{ color: secondaryColor }}>
                     <p className='info overflow'><b className={css(styles.detailColor)}>{props.artist}</b> @ <b className={css(styles.detailColor)}>{props.venue}</b></p>
