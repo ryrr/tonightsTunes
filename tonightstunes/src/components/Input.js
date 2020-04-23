@@ -11,8 +11,10 @@ let Input = (props) => {
     const [tracks, setTracks] = useState([]);
     const [audioPlayer] = useState(new Audio());
     const [selectedTrack, setSelectedTrack] = useState(-1);
-    //const testData = require('../util/testDataAudio.json')
-
+    const [loading, setLoading] = useState(false);
+    const [location, setLocation] = useState(null)
+    const [sortType, setSortType] = useState('random')
+    const [time, setTime] = useState('day')
     let locationSubmit = (e) => {
         e.preventDefault()
         setAnimation('bounceOutLeft')
@@ -21,15 +23,17 @@ let Input = (props) => {
         setTimeout(function () {
             setAnimation(null)
         }, 900);
-
+        setLocation(e.target[0].value)
         fetchTracks(e.target[0].value)
     }
 
     let fetchTracks = (location) => {
+        setLoading(true)
         const token = props.token;
         let data = {
             token: token,
             location: location,
+            span: time,
         }
         const requestOptions = {
             method: 'POST',
@@ -44,7 +48,7 @@ let Input = (props) => {
         //console.log(testData)
         //processData(testData)
     }
-    const processData = data => {
+    const processData = async (data) => {
         let newTracks = []
         for (let obj of data.events) {
             if (obj.tracks) {
@@ -54,19 +58,60 @@ let Input = (props) => {
                 }
             }
         }
-        newTracks = shuffle(newTracks)
+        //setLoading(false)
+        //newTracks = shuffle(newTracks)
+        newTracks = await sortTracks(newTracks)
         setTracks(newTracks)
     }
 
-    function shuffle(a) {
-        var j, x, i;
-        for (i = a.length - 1; i > 0; i--) {
-            j = Math.floor(Math.random() * (i + 1));
-            x = a[i];
-            a[i] = a[j];
-            a[j] = x;
+    const popularSort = (a, b) => {
+        let aPop = a.track.popularity + a.event.popularity
+        let bPop = b.track.popularity + b.event.popularity
+        return bPop - aPop
+    }
+
+    const dateSort = (a, b) => {
+        let aDate = new Date(a.event.date)
+        let bDate = new Date(b.event.date)
+        return aDate - bDate
+    }
+
+    const changeSort = (e) => {
+        setSortType(e.target.value)
+    }
+
+    const changeTime = (e) => {
+        let value = e.target.value
+        if (value === 'tonight') {
+            setTime('day')
         }
-        return a;
+        else {
+            setTime('week')
+        }
+
+    }
+
+    const sortTracks = async (input) => {
+        setLoading(true)
+        let sortedTracks
+        if (input) { sortedTracks = input }
+        else { sortedTracks = tracks }
+        if (sortType === 'random') {
+            sortedTracks = shuffle(sortedTracks)
+        }
+        else if (sortType === 'popularity') {
+            sortedTracks.sort(popularSort)
+        }
+        else if (sortType === 'date') {
+            sortedTracks.sort(dateSort)
+        }
+        if (!input) { setTracks(sortedTracks) }
+        setTimeout(function () {
+            setLoading(false)
+            setSortType('random')
+        }, 500);
+        return sortedTracks
+
     }
     const handleMouseover = (trackNum) => {
         if (trackNum === selectedTrack) {
@@ -87,6 +132,15 @@ let Input = (props) => {
         }
     }
 
+    let shouldMove = () => {
+        if (animation) {
+            return true
+        }
+        else { return false }
+    }
+
+    //HELPERS
+
 
     const millisToMinutesAndSeconds = millis => {
         var minutes = Math.floor(millis / 60000);
@@ -98,6 +152,17 @@ let Input = (props) => {
         const hex = x.toString(16)
         return hex.length === 1 ? '0' + hex : hex
     }).join('')
+
+    function shuffle(a) {
+        var j, x, i;
+        for (i = a.length - 1; i > 0; i--) {
+            j = Math.floor(Math.random() * (i + 1));
+            x = a[i];
+            a[i] = a[j];
+            a[j] = x;
+        }
+        return a;
+    }
 
     function formatDate(dateStr) {
         let date = new Date(dateStr)
@@ -111,8 +176,9 @@ let Input = (props) => {
         return (date.getMonth() + 1) + "/" + date.getDate() + " @ " + strTime;
     }
 
-    const createTracks = () => {
+    const classy = css(shouldMove() ? styles.bounceOutLeft : styles.nothing)
 
+    const createTracks = () => {
         return (<div className='tracks'>
             {
                 tracks.map((obj, index) => (
@@ -138,16 +204,6 @@ let Input = (props) => {
             }
         </div>);
     }
-
-    let shouldMove = () => {
-        if (animation) {
-            return true
-        }
-        else { return false }
-    }
-    const classy = css(
-        shouldMove() ? styles.bounceOutLeft : styles.nothing
-    )
     if (v) {
         return (
             <div className='locationDiv'>
@@ -165,12 +221,18 @@ let Input = (props) => {
             </div>
         )
     }
+    else if (!loading) {
+        return (
+            <div className='trackContainer'>
+                <Filters location={location} changeTime={changeTime} changeSort={changeSort} shuffle={fetchTracks}></Filters>
+                {loading ? null : createTracks()}
+            </div>
+        )
+    }
     else {
         return (
-
-            <div className='trackContainer'>
-                <Filters></Filters>
-                {v ? null : createTracks()}
+            <div className='loading'>
+                <i style={{ color: '#63585E' }} className="fas fa-circle-notch fa-spin fa-2x"></i>
             </div>
         )
     }

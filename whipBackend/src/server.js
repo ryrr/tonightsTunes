@@ -26,18 +26,19 @@ app.post("/search", async (req, res) => {
 app.post('/nearby', async (req, res) => {
     try {
         console.log('request recieved for ' + req.body.location)
+        let length = req.body.span
         let locationResp = await logic.getLocationID(req.body.location)
         let locationObj = JSON.parse(locationResp)
-        let cachedResults = await db.check({ length: 'day', code: (locationObj.id).toString() })
+        let cachedResults = await db.check({ length: req.body.span, code: (locationObj.id).toString() })
         if (cachedResults) {
             console.log('cache hit!')
             res.send(cachedResults)
         }
         else {
             console.log('cache miss')
-            let artistsResp = await logic.getNearbyArtists(locationResp, req.body.token)
+            let artistsResp = await logic.getNearbyArtists(locationResp, req.body.token, length)
             let tracksResp = await logic.getTracks(artistsResp, req.body.token)
-            tracksResp['length'] = "day"
+            tracksResp['length'] = req.body.span
             tracksResp['location'] = (locationObj.id).toString()
             let success = await db.insert(tracksResp)
             if (success) {

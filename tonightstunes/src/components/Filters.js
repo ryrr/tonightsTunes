@@ -1,8 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { StyleSheet, css } from 'aphrodite';
 let Filters = (props) => {
     let [opened, setOpened] = useState('0px')
-
+    let [location, setLocation] = useState(null)
+    useEffect(() => {
+        setLocation(props.location)
+    }, []);
     const styles = StyleSheet.create({
         container: {
             display: 'flex',
@@ -37,14 +40,13 @@ let Filters = (props) => {
             fontFamily: 'Roboto',
             fontWeight: 'bold',
             color: '#63585E',
-            borderRadius: '20px',
+            borderRadius: '10px',
             fontSize: '20pt',
             letterSpacing: '2px',
             marginBottom: '20px',
             marginTop: '20px',
             backgroundColor: '#C0C8E2',
             outline: 'none',
-            transform: 'rotate(2deg)'
         },
         select: {
             fontFamily: 'Roboto',
@@ -53,8 +55,8 @@ let Filters = (props) => {
             backgroundColor: '#C0C8E2',
             color: '#63585E',
             fontWeight: 'bold',
-            fontSize: '20pt',
-            transform: 'rotate(-2deg)'
+            fontSize: '17pt',
+            textAlign: 'center'
         }
     })
 
@@ -66,34 +68,44 @@ let Filters = (props) => {
             setOpened("0px")
         }
     }
+    const changeSort = (e) => {
+        props.changeSort(e)
+    }
+    const changeTime = (e) => {
+        props.changeTime(e)
+    }
+    const updateLocation = (e) => {
+        setLocation(e.target.value)
+    }
+
+    const shuffle = () => {
+        props.shuffle(location)
+    }
     return (
         <div className={css(styles.container)}>
             <i className="fas fa-cog fa-2x settingsIco" onClick={handleClick}></i>
             <div className={css(styles.settings)}>
                 <div className={css(styles.filter)}>
-                    <h2>sort by:</h2>
-                    <select className={css(styles.select)}>
+                    <h2>order by?</h2>
+                    <select onChange={changeSort} className={css(styles.select)}>
+                        <option>nothing</option>
                         <option>popularity</option>
                         <option>date</option>
                     </select>
                 </div>
                 <div className={css(styles.filter)}>
-                    <h2>venue:</h2>
-                    <select className={css(styles.select)}>
-                        <option>bowery ballroom</option>
-                        <option>le poisson rouge</option>
-                        <option>terminal 5</option>
-                    </select>
+                    <h2>where?</h2>
+                    <input onChange={updateLocation} placeholder={location} className={css(styles.select)}>
+                    </input>
                 </div>
                 <div className={css(styles.filter)}>
-                    <h2>time range:</h2>
-                    <select className={css(styles.select)}>
-                        <option>day</option>
-                        <option>week</option>
-                        <option>month</option>
+                    <h2>when?</h2>
+                    <select onChange={changeTime} className={css(styles.select)}>
+                        <option>tonight</option>
+                        <option>this week</option>
                     </select>
                 </div>
-                <button className={css(styles.shuffle)}>SHUFFLE TRACKS</button>
+                <button onClick={shuffle} className={css(styles.shuffle)}>apply</button>
             </div>
         </div>
     )

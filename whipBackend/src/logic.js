@@ -1,6 +1,7 @@
 const config = require('./config.json')
 const got = require('got')
 const ColorThief = require('colorthief');
+const moment = require('moment')
 
 exports.getToken = async () => {
     console.log('getting token....')
@@ -67,9 +68,23 @@ function replaceAll(str, find, replace) {
     return str.replace(new RegExp(find, 'g'), replace);
 }
 
-exports.getNearbyArtists = async (locationObj, token) => {
+function getDates(length) {
+    let query = ''
+    let today = moment().format('YYYY-MM-DD')
+    let week = moment().add(7, 'days').format('YYYY-MM-DD')
+    if (length === 'day') {
+        query = '&min_date=' + today + '&max_date=' + today
+    }
+    else if (length === 'week') {
+        query = '&min_date=' + today + '&max_date=' + week
+    }
+    return query
+}
+
+exports.getNearbyArtists = async (locationObj, token, length) => {
     locationObj = JSON.parse(locationObj)
-    let eventQuery = `https://api.songkick.com/api/3.0/metro_areas/${locationObj.id}/calendar.json?apikey=${config.songKick.apiKey}`
+    let dateStr = getDates(length)
+    let eventQuery = `https://api.songkick.com/api/3.0/metro_areas/${locationObj.id}/calendar.json?apikey=${config.songKick.apiKey}${dateStr}`
     try {
         let resp = await got(eventQuery)
         result = JSON.parse(resp.body)
