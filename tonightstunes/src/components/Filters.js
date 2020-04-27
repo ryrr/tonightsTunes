@@ -14,6 +14,7 @@ let Filters = (props) => {
             alignItems: 'center',
             width: '100%',
             marginBottom: '20px',
+            maxWidth: '500px',
         },
         settings: {
             maxHeight: opened,
@@ -57,6 +58,29 @@ let Filters = (props) => {
             fontWeight: 'bold',
             fontSize: '17pt',
             textAlign: 'center'
+        },
+        where: {
+            fontFamily: 'Roboto',
+            borderRadius: '2px',
+            marginLeft: '10px',
+            backgroundColor: '#C0C8E2',
+            color: '#63585E',
+            fontWeight: 'bold',
+            fontSize: '17pt',
+            textAlign: 'center',
+            width: '200px',
+        },
+        count: {
+            fontFamily: 'Roboto',
+            borderRadius: '2px',
+            marginLeft: '5px',
+            marginRight: '8px',
+            backgroundColor: '#C0C8E2',
+            color: '#63585E',
+            fontWeight: 'bold',
+            fontSize: '17pt',
+            textAlign: 'center',
+            width: '45px',
         }
     })
 
@@ -73,6 +97,9 @@ let Filters = (props) => {
     }
     const changeTime = (e) => {
         props.changeTime(e)
+    }
+    const updateSize = (e) => {
+        props.updateSize(e.target.value)
     }
     const updateLocation = (e) => {
         setLocation(e.target.value)
@@ -95,7 +122,7 @@ let Filters = (props) => {
                 </div>
                 <div className={css(styles.filter)}>
                     <h2>where?</h2>
-                    <input onChange={updateLocation} placeholder={location} className={css(styles.select)}>
+                    <input onChange={updateLocation} placeholder={location} className={css(styles.where)}>
                     </input>
                 </div>
                 <div className={css(styles.filter)}>
@@ -104,6 +131,11 @@ let Filters = (props) => {
                         <option>tonight</option>
                         <option>this week</option>
                     </select>
+                </div>
+                <div className={css(styles.filter)}>
+                    <h2>generate</h2>
+                    <input className={css(styles.count)} placeholder={props.size} onChange={updateSize} onKeyDown={() => { return false }} type="number" min="1" max="50"></input>
+                    <h2> songs</h2>
                 </div>
                 <button onClick={shuffle} className={css(styles.shuffle)}>apply</button>
             </div>

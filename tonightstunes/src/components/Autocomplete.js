@@ -128,19 +128,23 @@ class Autocomplete extends Component {
         }
 
         return (
-            <Fragment>
+            <Fragment >
                 <input
                     type="text"
+                    placeholder='NY'
                     onChange={onChange}
                     onKeyDown={onKeyDown}
                     value={userInput}
-                    placeholder='Enter a city'
-                    className='inputt'
+                    placeholder=''
+                    className='stateInput'
                 />
-                {suggestionsListComponent}
+                <div className='sug'>
+                    {suggestionsListComponent}
+                </div>
             </Fragment>
         );
     }
 }
 
 export default Autocomplete;
+

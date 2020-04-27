@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { StyleSheet, css } from 'aphrodite';
 import { bounceOutLeft } from 'react-animations';
+import { jello } from 'react-animations';
 import Autocomplete from "./Autocomplete";
 import Track from './Track.js'
 import Filters from './Filters'
@@ -15,11 +16,22 @@ let Input = (props) => {
     const [location, setLocation] = useState(null)
     const [sortType, setSortType] = useState('random')
     const [time, setTime] = useState('day')
+    const [size, setSize] = useState(20)
+    const [badLocation, setBadLocation] = useState(false)
+    const [token, setToken] = useState(null)
+
+    useEffect(() => {
+        let token = window.location.hash.substr(1).split('&')[0].split("=")[1]
+        if (token) {
+            //console.log(token)
+            setToken(token)
+        }
+    }, []);
+
     let locationSubmit = (e) => {
         e.preventDefault()
         setAnimation('bounceOutLeft')
         setV(false)
-
         setTimeout(function () {
             setAnimation(null)
         }, 900);
@@ -49,19 +61,56 @@ let Input = (props) => {
         //processData(testData)
     }
     const processData = async (data) => {
-        let newTracks = []
-        for (let obj of data.events) {
-            if (obj.tracks) {
-                if (obj.tracks[0]) {
-                    obj.tracks[0].duration = millisToMinutesAndSeconds(obj.tracks[0].duration)
-                    newTracks.push({ track: obj.tracks[0], event: obj.event })
+        if (data.err) {
+            setBadLocation(true)
+            setV(true)
+            setLoading(false)
+        }
+        else {
+            setBadLocation(false)
+            let newTracks = []
+            let counter = 0
+            console.log(size)
+            console.log(counter)
+            let shuffledEvents = shuffle(data.events)
+            for (let obj of shuffledEvents) {
+                if (counter === size) {
+                    console.log('broke')
+                    break
+                }
+                if (obj.tracks) {
+                    if (obj.tracks[0]) {
+                        counter += 1
+                        obj.tracks[0].duration = millisToMinutesAndSeconds(obj.tracks[0].duration)
+                        newTracks.push({ track: obj.tracks[0], event: obj.event })
+                    }
                 }
             }
+            //setLoading(false)
+            newTracks = await sortTracks(newTracks)
+            setTracks(newTracks)
         }
-        //setLoading(false)
-        //newTracks = shuffle(newTracks)
-        newTracks = await sortTracks(newTracks)
-        setTracks(newTracks)
+    }
+
+    const login = () => {
+        let client_id = '2a1e4b30a72b41feb5c432aed9877ccb'
+        let redirect_uri = 'http%3A%2F%2Flocalhost%3A3000'
+        let scopes = 'user-top-read'
+        let popup = window.open(`https://accounts.spotify.com/authorize?client_id=${client_id}&response_type=token&redirect_uri=${redirect_uri}&scope=${scopes}&show_dialog=true`, 'Login with Spotify', 'width=800,height=600')
+        window.spotifyCallback = (payload) => {
+            //alert(payload)
+            popup.close()
+            fetch('https://api.spotify.com/v1/me/top/artists', {
+                headers: {
+                    'Authorization': `Bearer ${payload}`
+                }
+            }).then(response => {
+                return response.json()
+            }).then(data => {
+                //output data
+                console.log(data)
+            })
+        }
     }
 
     const popularSort = (a, b) => {
@@ -88,7 +137,14 @@ let Input = (props) => {
         else {
             setTime('week')
         }
+    }
 
+    const updateSize = (value) => {
+        value = Number(value)
+        if (value < 50 && value >= 0) {
+            setSize(value)
+        }
+        else (setSize(20))
     }
 
     const sortTracks = async (input) => {
@@ -96,10 +152,7 @@ let Input = (props) => {
         let sortedTracks
         if (input) { sortedTracks = input }
         else { sortedTracks = tracks }
-        if (sortType === 'random') {
-            sortedTracks = shuffle(sortedTracks)
-        }
-        else if (sortType === 'popularity') {
+        if (sortType === 'popularity') {
             sortedTracks.sort(popularSort)
         }
         else if (sortType === 'date') {
@@ -137,6 +190,11 @@ let Input = (props) => {
             return true
         }
         else { return false }
+    }
+
+    const goBack = () => {
+        setV(true)
+        setSize(20)
     }
 
     //HELPERS
@@ -177,7 +235,14 @@ let Input = (props) => {
     }
 
     const classy = css(shouldMove() ? styles.bounceOutLeft : styles.nothing)
-
+    const noTracks = () => {
+        return (
+            <div className='noTracksDiv'>
+                <h1 className='noTracksMsg'>no tracks found 😔</h1>
+                <button className='goBackBttn' onClick={goBack}>go back</button>
+            </div>
+        )
+    }
     const createTracks = () => {
         return (<div className='tracks'>
             {
@@ -187,6 +252,7 @@ let Input = (props) => {
                         index={index}
                         artist={obj.track.artist}
                         name={obj.track.name}
+                        link={obj.event.link}
                         duration={obj.track.duration}
                         art={obj.track.art}
                         selected={(index === selectedTrack) ? true : false}
@@ -207,9 +273,10 @@ let Input = (props) => {
     if (v) {
         return (
             <div className='locationDiv'>
-                <form onSubmit={locationSubmit} className={classy}>
-                    <Autocomplete
-                        className='locationForm'
+                <form onSubmit={locationSubmit} className={classy, 'timmy'}>
+                    <input
+                        className='cityInput'
+                        placeholder='enter a city'
                         suggestions={
                             {
                                 '7644': 'New York',
@@ -217,6 +284,7 @@ let Input = (props) => {
                             }
                         }
                     />
+                    <h3 className={'locNotFound', css(styles.jello)}>{badLocation ? '🤔city not found, try again🤔' : null}</h3>
                 </form>
             </div>
         )
@@ -224,7 +292,8 @@ let Input = (props) => {
     else if (!loading) {
         return (
             <div className='trackContainer'>
-                <Filters location={location} changeTime={changeTime} changeSort={changeSort} shuffle={fetchTracks}></Filters>
+                <Filters updateSize={updateSize} size={size} location={location} changeTime={changeTime} changeSort={changeSort} shuffle={fetchTracks}></Filters>
+                {tracks.length ? null : noTracks()}
                 {loading ? null : createTracks()}
             </div>
         )
@@ -243,6 +312,13 @@ const styles = StyleSheet.create({
     bounceOutLeft: {
         animationName: bounceOutLeft,
         animationDuration: '1s',
+    },
+    jello: {
+        animationName: jello,
+        animationDuration: '1s',
+        fontFamily: 'Roboto',
+        color: '#C0C8E2',
+        padding: '5px',
     }
 })
 

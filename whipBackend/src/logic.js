@@ -32,7 +32,7 @@ exports.getLocationID = async (locationString) => {
             locationObj = { name: locationName, state: locationState, id: id }
             return JSON.stringify(locationObj)
         }
-        else { return locationObj }
+        else { return undefined }
     }
     catch (error) { console.log(error) }
 }
