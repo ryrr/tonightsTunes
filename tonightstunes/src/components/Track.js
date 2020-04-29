@@ -37,9 +37,9 @@ let Track = (props) => {
     if (type === true) {
         return (
             <div className='track' style={{ backgroundColor: primaryColor, borderBottom: 'solid ' + primaryColor }}>
-                <div className={'albumArt hvr-grow'} onClick={handlePlay} onMouseLeave={handleMouseEnter} onMouseEnter={handleMouseLeave}>
+                <div className={'albumArt hvr-grow'} onClick={handlePlay}>
                     <img src={props.art} alt='bah' className='albumArt' onClick={handleMouseover} />
-                    <i onClick={handleMouseover} style={{ color: '#C0C8E2' }} className={isPlaying ? pause : play}></i>
+                    {props.audio ? <i onClick={handleMouseover} style={{ color: '#C0C8E2' }} className={isPlaying ? pause : play}></i> : null}
                 </div>
                 <div className='trackInfo' onClick={handleTrackClick} style={{ color: secondaryColor }}>
                     <h4 className='trackName'>{props.name}</h4>
@@ -54,9 +54,9 @@ let Track = (props) => {
     else {
         return (
             <div className='track' style={{ backgroundColor: primaryColor, borderBottom: 'solid ' + primaryColor }}>
-                <div className='albumArt hvr-grow' onMouseOver={handlePlay}>
+                <div className='albumArt hvr-grow' onClick={handlePlay}>
                     <img src={props.art} alt='bah' className='albumArt' onClick={handleMouseover} />
-                    <i onClick={handleMouseover} style={{ color: '#C0C8E2' }} className={play}></i>
+                    {props.audio ? <i onClick={handleMouseover} style={{ color: '#C0C8E2' }} className={isPlaying ? pause : play}></i> : null}
                 </div>
                 <div className='eventInfo' onClick={handleTrackClick} style={{ color: secondaryColor }}>
                     <p className='info overflow'><a style={{ color: props.detailColor }} target="_blank" href={props.link} className='eventlink'><b className={css(styles.detailColor)}>{props.artist}</b> @ <b className={css(styles.detailColor)}>{props.venue}</b></a></p>

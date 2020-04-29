@@ -141,7 +141,7 @@ exports.getTracks = async (artistObj, token) => {
                 let track = result.tracks[randTrack]
                 let artURL = track['album']['images'][0]['url']
                 let colors = await ColorThief.getPalette(artURL, 5)
-                let trackObj = { name: track['name'], artist: track['album']['artists'][0]['name'], album: track['album']['name'], art: track['album']['images'][0]['url'], duration: track['duration_ms'], popularity: track['popularity'], audio: track['preview_url'], colors: colors }
+                let trackObj = { name: track['name'], artist: track['album']['artists'][0]['name'], album: track['album']['name'], art: track['album']['images'][0]['url'], duration: track['duration_ms'], popularity: track['popularity'], uri: track['uri'], audio: track['preview_url'], colors: colors }
                 tracks.push(trackObj)
                 obj['tracks'] = tracks
             }

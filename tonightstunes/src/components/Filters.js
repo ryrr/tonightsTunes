@@ -113,17 +113,12 @@ let Filters = (props) => {
             <i className="fas fa-cog fa-2x settingsIco" onClick={handleClick}></i>
             <div className={css(styles.settings)}>
                 <div className={css(styles.filter)}>
-                    <h2>order by?</h2>
+                    <h2>sort by?</h2>
                     <select onChange={changeSort} className={css(styles.select)}>
                         <option>nothing</option>
                         <option>popularity</option>
                         <option>date</option>
                     </select>
-                </div>
-                <div className={css(styles.filter)}>
-                    <h2>where?</h2>
-                    <input onChange={updateLocation} placeholder={location} className={css(styles.where)}>
-                    </input>
                 </div>
                 <div className={css(styles.filter)}>
                     <h2>when?</h2>
@@ -133,15 +128,24 @@ let Filters = (props) => {
                     </select>
                 </div>
                 <div className={css(styles.filter)}>
-                    <h2>generate</h2>
+                    <h2>how many?</h2>
                     <input className={css(styles.count)} placeholder={props.size} onChange={updateSize} onKeyDown={() => { return false }} type="number" min="1" max="50"></input>
-                    <h2> songs</h2>
                 </div>
-                <button onClick={shuffle} className={css(styles.shuffle)}>apply</button>
+                <div className='filterBttnDiv'>
+                    <button className='goBackBttn2' onClick={props.goBack}>go back</button>
+                    <button onClick={shuffle} className={css(styles.shuffle)}>apply filters</button>
+                </div>
             </div>
         </div>
     )
 }
+/*
+<div className={css(styles.filter)}>
+    <h2>where?</h2>
+    <input onChange={updateLocation} placeholder={location ? location : location} className={css(styles.where)}>
+    </input>
+</div>
+*/
 
 
 export default Filters

@@ -5,6 +5,7 @@ import { jello } from 'react-animations';
 import Autocomplete from "./Autocomplete";
 import Track from './Track.js'
 import Filters from './Filters'
+import Connect from './Connect.js'
 
 let Input = (props) => {
     const [animation, setAnimation] = useState(null)
@@ -18,15 +19,8 @@ let Input = (props) => {
     const [time, setTime] = useState('day')
     const [size, setSize] = useState(20)
     const [badLocation, setBadLocation] = useState(false)
-    const [token, setToken] = useState(null)
-
-    useEffect(() => {
-        let token = window.location.hash.substr(1).split('&')[0].split("=")[1]
-        if (token) {
-            //console.log(token)
-            setToken(token)
-        }
-    }, []);
+    const [uris, setUris] = useState([])
+    const [added, setAdded] = useState(false)
 
     let locationSubmit = (e) => {
         e.preventDefault()
@@ -69,6 +63,7 @@ let Input = (props) => {
         else {
             setBadLocation(false)
             let newTracks = []
+            let trackUris = []
             let counter = 0
             console.log(size)
             console.log(counter)
@@ -83,35 +78,17 @@ let Input = (props) => {
                         counter += 1
                         obj.tracks[0].duration = millisToMinutesAndSeconds(obj.tracks[0].duration)
                         newTracks.push({ track: obj.tracks[0], event: obj.event })
+                        trackUris.push(obj.tracks[0].uri)
                     }
                 }
             }
-            //setLoading(false)
+            setUris(trackUris)
             newTracks = await sortTracks(newTracks)
             setTracks(newTracks)
         }
     }
 
-    const login = () => {
-        let client_id = '2a1e4b30a72b41feb5c432aed9877ccb'
-        let redirect_uri = 'http%3A%2F%2Flocalhost%3A3000'
-        let scopes = 'user-top-read'
-        let popup = window.open(`https://accounts.spotify.com/authorize?client_id=${client_id}&response_type=token&redirect_uri=${redirect_uri}&scope=${scopes}&show_dialog=true`, 'Login with Spotify', 'width=800,height=600')
-        window.spotifyCallback = (payload) => {
-            //alert(payload)
-            popup.close()
-            fetch('https://api.spotify.com/v1/me/top/artists', {
-                headers: {
-                    'Authorization': `Bearer ${payload}`
-                }
-            }).then(response => {
-                return response.json()
-            }).then(data => {
-                //output data
-                console.log(data)
-            })
-        }
-    }
+
 
     const popularSort = (a, b) => {
         let aPop = a.track.popularity + a.event.popularity
@@ -141,7 +118,7 @@ let Input = (props) => {
 
     const updateSize = (value) => {
         value = Number(value)
-        if (value < 50 && value >= 0) {
+        if (value < 50 && value >= 1) {
             setSize(value)
         }
         else (setSize(20))
@@ -149,6 +126,7 @@ let Input = (props) => {
 
     const sortTracks = async (input) => {
         setLoading(true)
+        setAdded(false)
         let sortedTracks
         if (input) { sortedTracks = input }
         else { sortedTracks = tracks }
@@ -253,6 +231,7 @@ let Input = (props) => {
                         artist={obj.track.artist}
                         name={obj.track.name}
                         link={obj.event.link}
+                        uri={obj.track.uri}
                         duration={obj.track.duration}
                         art={obj.track.art}
                         selected={(index === selectedTrack) ? true : false}
@@ -289,10 +268,21 @@ let Input = (props) => {
             </div>
         )
     }
+    else if (!loading && added) {
+        return (
+            <div className='trackContainer'>
+                <a className='playlistLink' href={added} target="_blank"><h3 className='added' >🎉 playlist added here 🎉</h3></a>
+                <Filters goBack={goBack} updateSize={updateSize} size={size} location={location} changeTime={changeTime} changeSort={changeSort} shuffle={fetchTracks}></Filters>
+                {tracks.length ? null : noTracks()}
+                {loading ? null : createTracks()}
+            </div>
+        )
+    }
     else if (!loading) {
         return (
             <div className='trackContainer'>
-                <Filters updateSize={updateSize} size={size} location={location} changeTime={changeTime} changeSort={changeSort} shuffle={fetchTracks}></Filters>
+                {props.accessToken ? <Connect setAdded={(playLink) => { setAdded(playLink) }} uris={uris} token={props.accessToken}></Connect> : null}
+                <Filters goBack={goBack} updateSize={updateSize} size={size} location={location} changeTime={changeTime} changeSort={changeSort} shuffle={fetchTracks}></Filters>
                 {tracks.length ? null : noTracks()}
                 {loading ? null : createTracks()}
             </div>

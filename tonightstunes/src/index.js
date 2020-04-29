@@ -5,20 +5,34 @@ import './css/hover-min.css';
 import Input from './components/Input.js'
 //import Track from './components/Track.js'
 import Heading from './components/Heading.js'
-
+import hash from './util/hash'
 
 let App = (props) => {
     const [token, setToken] = useState(null);
+    const [accessToken, setAccessToken] = useState(null)
     useEffect(() => {
         fetch('http://localhost:3001/token')
             .then(response => response.json())
             .then(data => setToken(data.token));
     }, []);
 
+    useEffect(() => {
+        let accessToken = hash.access_token;
+        if (accessToken) {
+            setAccessToken(accessToken);
+            console.log(accessToken);
+        }
+    }, []);
+
+    let client_id = '2a1e4b30a72b41feb5c432aed9877ccb'
+    let redirect_uri = 'http%3A%2F%2Flocalhost%3A3000'
+    let scopes = 'playlist-modify-private'
+    let link = `https://accounts.spotify.com/authorize?client_id=${client_id}&response_type=token&redirect_uri=${redirect_uri}&scope=${scopes}&show_dialog=true`
+
     return (
         <div className='app'>
-            <Heading></Heading>
-            <Input token={token}></Input>
+            <Heading accessToken={accessToken} link={link}></Heading>
+            <Input accessToken={accessToken} token={token}></Input>
         </div >
     )
 }
