@@ -251,20 +251,23 @@ let Input = (props) => {
     }
     if (v) {
         return (
-            <div className='locationDiv'>
-                <form onSubmit={locationSubmit} className={classy, 'timmy'}>
-                    <input
-                        className='cityInput'
-                        placeholder='enter a city'
-                        suggestions={
-                            {
-                                '7644': 'New York',
-                                'N2393': 'New Yam'
+            <div className='wrapper'>
+                <div className='locationDiv'>
+                    <form onSubmit={locationSubmit} className={classy, 'timmy'}>
+                        <input
+                            className='cityInput'
+                            placeholder='enter a city'
+                            suggestions={
+                                {
+                                    '7644': 'New York',
+                                    'N2393': 'New Yam'
+                                }
                             }
-                        }
-                    />
-                    <h3 className={'locNotFound', css(styles.jello)}>{badLocation ? '🤔city not found, try again🤔' : null}</h3>
-                </form>
+                        />
+                        <h3 className={'locNotFound', css(styles.jello)}>{badLocation ? '🤔city not found, try again🤔' : null}</h3>
+                    </form>
+                </div>
+                <h4 className='footer'>©2020 Ryan Rivera </h4>
             </div>
         )
     }

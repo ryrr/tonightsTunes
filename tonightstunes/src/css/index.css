@@ -233,6 +233,23 @@
     font-weight: bold;
     margin-right: 20px;
 }
+.footer{
+    position: fixed;
+    left: 10px;
+    bottom: 0;
+    width: 100%;
+    border-top:solid #C0C8E2 ;
+    color: #C0C8E2;
+    text-align: center;
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    
+}
+.durr{
+    border:solid green;
+}
 
 @font-face {
   font-family: groovy;

@@ -3,6 +3,7 @@ import { StyleSheet, css } from 'aphrodite';
 let Filters = (props) => {
     let [opened, setOpened] = useState('0px')
     let [location, setLocation] = useState(null)
+    let [dropdown, setDropdown] = useState('settings')
     useEffect(() => {
         setLocation(props.location)
     }, []);
@@ -81,15 +82,53 @@ let Filters = (props) => {
             fontSize: '17pt',
             textAlign: 'center',
             width: '45px',
+        },
+        iconDiv: {
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            width: '80%'
+        },
+        instList: {
+            fontFamily: 'Roboto',
+            color: '#C0C8E2'
+        },
+        extList: {
+            fontFamily: 'Roboto',
+            color: '#DF2935',
+        },
+        li: {
+            marginBottom: '8px',
+            fontSize: '13pt'
+        },
+        emphasis: {
+            color: 'white',
+        },
+        howTo: {
+            fontFamily: 'Roboto',
+            color: '#C0C8E2'
         }
+
+
     })
 
-    const handleClick = () => {
-        if (opened === '0px') {
-            setOpened("500px")
+    const handleClick = (e) => {
+        let clicked = e.target.getAttribute('name')
+        if (dropdown !== clicked) {
+            setOpened("0px")
+            setTimeout(function () {
+                setDropdown(clicked)
+                setOpened("500px")
+            }, 2500);
         }
         else {
-            setOpened("0px")
+            setDropdown(clicked)
+            if (opened === '0px') {
+                setOpened("500px")
+            }
+            else {
+                setOpened("0px")
+            }
         }
     }
     const changeSort = (e) => {
@@ -104,40 +143,73 @@ let Filters = (props) => {
     const updateLocation = (e) => {
         setLocation(e.target.value)
     }
-
     const shuffle = () => {
         props.shuffle(location)
     }
-    return (
-        <div className={css(styles.container)}>
-            <i className="fas fa-cog fa-2x settingsIco" onClick={handleClick}></i>
-            <div className={css(styles.settings)}>
-                <div className={css(styles.filter)}>
-                    <h2>sort by?</h2>
-                    <select onChange={changeSort} className={css(styles.select)}>
-                        <option>nothing</option>
-                        <option>popularity</option>
-                        <option>date</option>
-                    </select>
+    if (dropdown == 'settings') {
+
+        return (
+            <div className={css(styles.container)}>
+                <div className={css(styles.iconDiv)}>
+                    <i className="fas fa-sync-alt fa-2x settingsIco" onClick={shuffle}></i>
+                    <i className="fas fa-cog fa-2x settingsIco" name='settings' onClick={handleClick}></i>
+                    <i className="fas fa-question-circle fa-2x settingsIco" name='info' onClick={handleClick}></i>
                 </div>
-                <div className={css(styles.filter)}>
-                    <h2>when?</h2>
-                    <select onChange={changeTime} className={css(styles.select)}>
-                        <option>tonight</option>
-                        <option>this week</option>
-                    </select>
-                </div>
-                <div className={css(styles.filter)}>
-                    <h2>how many?</h2>
-                    <input className={css(styles.count)} placeholder={props.size} onChange={updateSize} onKeyDown={() => { return false }} type="number" min="1" max="50"></input>
-                </div>
-                <div className='filterBttnDiv'>
-                    <button className='goBackBttn2' onClick={props.goBack}>go back</button>
-                    <button onClick={shuffle} className={css(styles.shuffle)}>apply filters</button>
+                <div className={css(styles.settings)}>
+                    <div className={css(styles.filter)}>
+                        <h2>sort by?</h2>
+                        <select onChange={changeSort} className={css(styles.select)}>
+                            <option>nothing</option>
+                            <option>popularity</option>
+                            <option>date</option>
+                        </select>
+                    </div>
+                    <div className={css(styles.filter)}>
+                        <h2>when?</h2>
+                        <select onChange={changeTime} className={css(styles.select)}>
+                            <option>tonight</option>
+                            <option>this week</option>
+                        </select>
+                    </div>
+                    <div className={css(styles.filter)}>
+                        <h2>how many?</h2>
+                        <input className={css(styles.count)} placeholder={props.size} onChange={updateSize} onKeyDown={() => { return false }} type="number" min="1" max="50"></input>
+                    </div>
+                    <div className='filterBttnDiv'>
+                        <button className='goBackBttn2' onClick={props.goBack}>go back</button>
+                        <button onClick={shuffle} className={css(styles.shuffle)}>apply filters</button>
+                    </div>
                 </div>
             </div>
-        </div>
-    )
+        )
+    }
+    else {
+        return (
+            <div className={css(styles.container)}>
+                <div className={css(styles.iconDiv)}>
+                    <i className="fas fa-sync-alt fa-2x settingsIco" onClick={shuffle}></i>
+                    <i className="fas fa-cog fa-2x settingsIco" name='settings' onClick={handleClick}></i>
+                    <i className="fas fa-question-circle fa-2x settingsIco" name='info' onClick={handleClick}></i>
+                </div>
+                <div className={css(styles.settings)}>
+                    <h2 className={css(styles.howTo)}>HOW TO USE</h2>
+                    <ul className={css(styles.instList)}>
+                        <li className={css(styles.li)}>click <i className={css(styles.emphasis)}>right side</i> of track to toggle between event & track info</li>
+                        <li className={css(styles.li)}>click <i className={css(styles.emphasis)}>album art</i> to play a sample of the track</li>
+                        <li className={css(styles.li)}>connecting to spotify is strongly reccomended as it will allow you to save the playlist along with access to future features</li>
+                    </ul>
+                    <ul className={css(styles.extList)}>
+                        <li>
+                            Due to COVID-19 many, if not all events and concerts
+                            have been canceled. In order to maintain functionality,
+                            canceled events have been temporarily allowed in the results.
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        )
+    }
 }
 /*
 <div className={css(styles.filter)}>
