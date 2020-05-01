@@ -11,7 +11,7 @@ let App = (props) => {
     const [token, setToken] = useState(null);
     const [accessToken, setAccessToken] = useState(null)
     useEffect(() => {
-        fetch('http://localhost:3001/token')
+        fetch('http://167.172.138.71:2222/token')
             .then(response => response.json())
             .then(data => setToken(data.token));
     }, []);

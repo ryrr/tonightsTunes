@@ -47,7 +47,7 @@ let Input = (props) => {
             body: JSON.stringify(data)
         };
 
-        fetch('http://localhost:3001/nearby', requestOptions)
+        fetch('http://167.172.138.71:2222/nearby', requestOptions)
             .then(response => response.json())
             .then(data => processData(data));
 

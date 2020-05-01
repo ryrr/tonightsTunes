@@ -59,7 +59,7 @@ app.post('/nearby', async (req, res) => {
     catch (error) { console.log(error) }
 })
 
-app.listen(3001, () => console.log('Server listening on port 3001'));
+app.listen(2222, () => console.log('Server listening on port 2222'));
 
 
 
