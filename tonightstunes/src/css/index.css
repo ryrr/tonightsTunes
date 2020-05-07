@@ -360,6 +360,7 @@ textarea:focus, input:focus{
   }
   .title{
       margin-top: 5px;
+      color: red;
   }
   .heading{
       margin-bottom: 5px;
