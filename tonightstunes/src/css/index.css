@@ -356,17 +356,12 @@ textarea:focus, input:focus{
 @media only screen and (max-width: 768px) {
   /* For desktop: */
   .subTitle{
-      font-size: 12px;
+      font-size: 14px;
   }
   .title{
       margin-top: 5px;
-      color: red;
   }
   .heading{
       margin-bottom: 5px;
-  }
-  .pwrDiv{
-      border: solid red;
-      
   }
 }
