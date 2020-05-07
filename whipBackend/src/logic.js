@@ -82,19 +82,23 @@ function getDates(length) {
 }
 
 function formatDate(dateStr) {
-    //let date = new Date(dateStr)
-    let date = new Date(dateStr)
-    let hours = date.getHours();
-    let minutes = date.getMinutes();
-    let ampm = hours >= 12 ? 'pm' : 'am';
-    hours = hours % 12;
-    hours = hours ? hours : 12; // the hour '0' should be '12'
-    minutes = minutes < 10 ? '0' + minutes : minutes;
-    let strTime = hours + ':' + minutes + ' ' + ampm;
-    let thingy = date.getMonth() + 1 + "/" + date.getDate() + " @ " + strTime
-    thingy = thingy.toString()
-    console.log(typeof thingy)
-    return thingy
+    console.log(dateStr)
+    if (!dateStr) {
+        return null
+    }
+    else {
+        let hours = moment(dateStr).hour();
+        let minutes = moment(dateStr).minute();
+        let ampm = hours >= 12 ? 'pm' : 'am';
+        hours = hours % 12;
+        hours = hours ? hours : 12; // the hour '0' should be '12'
+        minutes = minutes < 10 ? '0' + minutes : minutes;
+        let strTime = hours + ':' + minutes + ' ' + ampm;
+        let thingy = moment(dateStr).date() + "/" + moment(dateStr).month() + " @ " + strTime
+        thingy = thingy.toString()
+        console.log(typeof thingy)
+        return thingy
+    }
 }
 
 exports.getNearbyArtists = async (locationObj, token, length) => {
