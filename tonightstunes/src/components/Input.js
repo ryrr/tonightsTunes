@@ -46,7 +46,6 @@ let Input = (props) => {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)
         };
-
         fetch('http://167.172.138.71:2222/nearby', requestOptions)
             .then(response => response.json())
             .then(data => processData(data));
@@ -200,7 +199,10 @@ let Input = (props) => {
         return a;
     }
 
+
+
     function formatDate(dateStr) {
+        //let date = new Date(dateStr)
         let date = new Date(dateStr)
         let hours = date.getHours();
         let minutes = date.getMinutes();
@@ -239,7 +241,8 @@ let Input = (props) => {
                         audio={obj.track.audio}
                         venue={obj.event.venue ? obj.event.venue['name'] : '?'}
                         venueLink={obj.event.venue ? obj.event.venue['link'] : '/'}
-                        date={obj.event.date ? formatDate(obj.event.date) : 'unknown date'}
+                        //date={obj.event.date ? formatDate(obj.event.date) : 'unknown date'}
+                        date={obj.event.dateStr ? obj.event.dateStr : 'unknown date'}
                         location={obj.event.location}
                         primaryColor={rgbToHex(obj.track.colors[0][0], obj.track.colors[0][1], obj.track.colors[0][2])}
                         secondaryColor={rgbToHex(obj.track.colors[1][0], obj.track.colors[1][1], obj.track.colors[1][2])}

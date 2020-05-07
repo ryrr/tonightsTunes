@@ -81,6 +81,19 @@ function getDates(length) {
     return query
 }
 
+function formatDate(dateStr) {
+    //let date = new Date(dateStr)
+    let date = new Date(dateStr)
+    let hours = date.getHours();
+    let minutes = date.getMinutes();
+    let ampm = hours >= 12 ? 'pm' : 'am';
+    hours = hours % 12;
+    hours = hours ? hours : 12; // the hour '0' should be '12'
+    minutes = minutes < 10 ? '0' + minutes : minutes;
+    let strTime = hours + ':' + minutes + ' ' + ampm;
+    return (date.getMonth() + 1) + "/" + date.getDate() + " @ " + strTime;
+}
+
 exports.getNearbyArtists = async (locationObj, token, length) => {
     locationObj = JSON.parse(locationObj)
     let dateStr = getDates(length)
@@ -95,12 +108,15 @@ exports.getNearbyArtists = async (locationObj, token, length) => {
             if (event.performance[0]) {
                 artistObj = await this.getArtistInfo(event.performance[0].artist.displayName, token)
                 if (artistObj) {
+                    let dateStr = formatDate(event.start.datetime)
+                    console.log(dateStr)
                     eventObj = {
                         event: {
                             link: event.uri,
                             popularity: event.popularity,
                             status: event.status,
                             date: event.start.datetime,
+                            dateStr: dateStr,
                             artist: event.performance[0].artist.displayName,
                             venue: { name: event.venue.displayName, link: event.venue.uri },
                             location: event.location.city,
