@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, css } from 'aphrodite';
 let Filters = (props) => {
-    let [opened, setOpened] = useState('0px')
     let [location, setLocation] = useState(null)
-    let [dropdown, setDropdown] = useState('settings')
+    let [dropdown, setDropdown] = useState('null')
     useEffect(() => {
         setLocation(props.location)
     }, []);
@@ -18,9 +17,6 @@ let Filters = (props) => {
             maxWidth: '500px',
         },
         settings: {
-            maxHeight: opened,
-            overflow: 'hidden',
-            transition: 'all 3s ease',
             display: 'flex',
             flexDirection: "column",
             justifyContent: "center",
@@ -91,7 +87,8 @@ let Filters = (props) => {
         },
         instList: {
             fontFamily: 'Roboto',
-            color: '#C0C8E2'
+            color: '#C0C8E2',
+
         },
         extList: {
             fontFamily: 'Roboto',
@@ -99,14 +96,19 @@ let Filters = (props) => {
         },
         li: {
             marginBottom: '8px',
-            fontSize: '13pt'
+            fontSize: '13pt',
         },
         emphasis: {
             color: 'white',
         },
         howTo: {
-            fontFamily: 'Roboto',
-            color: '#C0C8E2'
+            fontFamily: 'Groovy',
+            color: '#C0C8E2',
+            letterSpacing: '3px',
+            fontSize: '27pt',
+            margin: '0px',
+            marginTop: '10px'
+
         }
 
 
@@ -115,20 +117,10 @@ let Filters = (props) => {
     const handleClick = (e) => {
         let clicked = e.target.getAttribute('name')
         if (dropdown !== clicked) {
-            setOpened("0px")
-            setTimeout(function () {
-                setDropdown(clicked)
-                setOpened("500px")
-            }, 2500);
+            setDropdown(clicked)
         }
         else {
-            setDropdown(clicked)
-            if (opened === '0px') {
-                setOpened("500px")
-            }
-            else {
-                setOpened("0px")
-            }
+            setDropdown(null)
         }
     }
     const changeSort = (e) => {
@@ -151,7 +143,7 @@ let Filters = (props) => {
         return (
             <div className={css(styles.container)}>
                 <div className={css(styles.iconDiv)}>
-                    <i className="fas fa-sync-alt fa-2x settingsIco" onClick={shuffle}></i>
+                    <i className="fas fa-arrow-circle-left fa-2x settingsIco" onClick={props.goBack}></i>
                     <i className="fas fa-cog fa-2x settingsIco" name='settings' onClick={handleClick}></i>
                     <i className="fas fa-question-circle fa-2x settingsIco" name='info' onClick={handleClick}></i>
                 </div>
@@ -172,27 +164,26 @@ let Filters = (props) => {
                         </select>
                     </div>
                     <div className={css(styles.filter)}>
-                        <h2>how many?</h2>
+                        <h2># tracks?</h2>
                         <input className={css(styles.count)} placeholder={props.size} onChange={updateSize} onKeyDown={() => { return false }} type="number" min="1" max="50"></input>
                     </div>
                     <div className='filterBttnDiv'>
-                        <button className='goBackBttn2' onClick={props.goBack}>go back</button>
                         <button onClick={shuffle} className={css(styles.shuffle)}>apply filters</button>
                     </div>
                 </div>
             </div>
         )
     }
-    else {
+    else if (dropdown == 'info') {
         return (
             <div className={css(styles.container)}>
                 <div className={css(styles.iconDiv)}>
-                    <i className="fas fa-sync-alt fa-2x settingsIco" onClick={shuffle}></i>
+                    <i className="fas fa-arrow-circle-left fa-2x settingsIco" onClick={props.goBack}></i>
                     <i className="fas fa-cog fa-2x settingsIco" name='settings' onClick={handleClick}></i>
                     <i className="fas fa-question-circle fa-2x settingsIco" name='info' onClick={handleClick}></i>
                 </div>
                 <div className={css(styles.settings)}>
-                    <h2 className={css(styles.howTo)}>HOW TO USE</h2>
+                    <h2 className={css(styles.howTo)}>INSTRUCTIONS</h2>
                     <ul className={css(styles.instList)}>
                         <li className={css(styles.li)}>click <i className={css(styles.emphasis)}>right side</i> of track to toggle between event & track info</li>
                         <li className={css(styles.li)}>click <i className={css(styles.emphasis)}>album art</i> to play a sample of the track</li>
@@ -206,6 +197,17 @@ let Filters = (props) => {
                         </li>
 
                     </ul>
+                </div>
+            </div>
+        )
+    }
+    else {
+        return (
+            <div className={css(styles.container)}>
+                <div className={css(styles.iconDiv)}>
+                    <i className="fas fa-arrow-circle-left fa-2x settingsIco" onClick={props.goBack}></i>
+                    <i className="fas fa-cog fa-2x settingsIco" name='settings' onClick={handleClick}></i>
+                    <i className="fas fa-question-circle fa-2x settingsIco" name='info' onClick={handleClick}></i>
                 </div>
             </div>
         )

@@ -229,7 +229,7 @@ let Input = (props) => {
                         venue={obj.event.venue ? obj.event.venue['name'] : '?'}
                         venueLink={obj.event.venue ? obj.event.venue['link'] : '/'}
                         //date={obj.event.date ? formatDate(obj.event.date) : 'unknown date'}
-                        date={obj.event.dateStr ? obj.event.dateStr : 'unknown date'}
+                        dateStr={obj.event.dateStr ? obj.event.dateStr : 'unknown date'}
                         location={obj.event.location}
                         primaryColor={rgbToHex(obj.track.colors[0][0], obj.track.colors[0][1], obj.track.colors[0][2])}
                         secondaryColor={rgbToHex(obj.track.colors[1][0], obj.track.colors[1][1], obj.track.colors[1][2])}

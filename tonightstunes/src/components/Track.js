@@ -60,7 +60,7 @@ let Track = (props) => {
                 </div>
                 <div className='eventInfo' onClick={handleTrackClick} style={{ color: secondaryColor }}>
                     <p className='info overflow'><a style={{ color: props.detailColor }} target="_blank" href={props.link} className='eventlink'><b className={css(styles.detailColor)}>{props.artist}</b> @ <b className={css(styles.detailColor)}>{props.venue}</b></a></p>
-                    <p className='info overflow'><b className={css(styles.detailColor)}>{props.date}</b> in <b className={css(styles.detailColor)}>{props.location}</b></p>
+                    <p className='info overflow'><b className={css(styles.detailColor)}>{props.dateStr}</b> in <b className={css(styles.detailColor)}>{props.location}</b></p>
                 </div >
             </div >
         )
