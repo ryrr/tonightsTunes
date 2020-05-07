@@ -1,3 +1,4 @@
+
 .app{
     display: flex;
     justify-content: center;
@@ -6,6 +7,12 @@
 }
 .heading{
     margin-bottom: 20px;
+}
+.theTexts{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 .title{
     font-family: 'groovy';
@@ -21,6 +28,7 @@
     margin-top: 10px;
     font-family: 'Gotu', sans-serif;
     font-size: 16px;
+    text-align: center;
 }
 .pwrDiv{
     display: flex;
@@ -343,4 +351,17 @@
 }
 textarea:focus, input:focus{
     outline: none;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For desktop: */
+  .subTitle{
+      font-size: 12px;
+  }
+  .title{
+      margin-top: 5px;
+  }
+  .heading{
+      margin-bottom: 5px;
+  }
 }

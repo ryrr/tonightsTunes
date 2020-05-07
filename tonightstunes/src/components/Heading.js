@@ -3,8 +3,10 @@ let Heading = (props) => {
     let cursor = props.accessToken ? 'auto' : 'pointer'
     return (
         <div className='heading'>
-            <h1 className='title'>Whip</h1>
-            <h3 className='subTitle'>A playlist generator based on music near you</h3>
+            <div className='thetexts'>
+                <h1 className='title'>Whip</h1>
+                <h3 className='subTitle'>A playlist generator based on music near you</h3>
+            </div>
             <div className="pwrDiv">
                 <img className='songkickLogo' src='/songkicklogo.png'></img>
                 <div className='connectDiv'>
