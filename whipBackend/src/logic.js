@@ -87,6 +87,8 @@ function formatDate(dateStr) {
         return null
     }
     else {
+        let blah = new Date(dateStr)
+        dateStr = blah.toISOString()
         let hours = moment(dateStr).hour();
         let minutes = moment(dateStr).minute();
         let ampm = hours >= 12 ? 'pm' : 'am';
