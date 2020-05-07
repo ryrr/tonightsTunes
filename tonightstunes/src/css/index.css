@@ -365,4 +365,8 @@ textarea:focus, input:focus{
   .heading{
       margin-bottom: 5px;
   }
+  .pwrDiv{
+      border: solid red;
+      
+  }
 }
