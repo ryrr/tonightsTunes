@@ -96,7 +96,7 @@ function formatDate(dateStr) {
         hours = hours ? hours : 12; // the hour '0' should be '12'
         minutes = minutes < 10 ? '0' + minutes : minutes;
         let strTime = hours + ':' + minutes + ' ' + ampm;
-        let thingy = moment(dateStr).date() + "/" + moment(dateStr).month() + " @ " + strTime
+        let thingy = moment(dateStr).month() + "/" + moment(dateStr).date() + " @ " + strTime
         thingy = thingy.toString()
         console.log(typeof thingy)
         return thingy
