@@ -99,8 +99,10 @@ let Input = (props) => {
 
     const dateSort = (a, b) => {
         let aDate = new Date(a.event.date)
+        let aDate2 = new Date((aDate).toISOString())
         let bDate = new Date(b.event.date)
-        return aDate - bDate
+        let bDate2 = new Date((bDate).toISOString())
+        return aDate2 - bDate2
     }
 
     const changeSort = (e) => {
@@ -205,7 +207,7 @@ let Input = (props) => {
     const noTracks = () => {
         return (
             <div className='noTracksDiv'>
-                <h1 className='noTracksMsg'>no tracks found 😔</h1>
+                <h1 className='noTracksMsg'>no events found 😔</h1>
                 <button className='goBackBttn' onClick={goBack}>go back</button>
             </div>
         )

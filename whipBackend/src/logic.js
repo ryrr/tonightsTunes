@@ -83,13 +83,13 @@ function getDates(length) {
 
 function formatDate(dateStr) {
     console.log(dateStr)
-    if (!dateStr) {
+    let blah = new Date(dateStr)
+    let hours = moment(dateStr).hour();
+    dateStr = blah.toISOString()
+    if (!dateStr || !hours) {
         return null
     }
     else {
-        let blah = new Date(dateStr)
-        dateStr = blah.toISOString()
-        let hours = moment(dateStr).hour();
         let minutes = moment(dateStr).minute();
         let ampm = hours >= 12 ? 'pm' : 'am';
         hours = hours % 12;
@@ -111,33 +111,38 @@ exports.getNearbyArtists = async (locationObj, token, length) => {
         let resp = await got(eventQuery)
         result = JSON.parse(resp.body)
         let rawEvents = result.resultsPage.results.event
-        //console.log(rawEvents)
-        let events = []
-        for (let event of rawEvents) {
-            if (event.performance[0]) {
-                artistObj = await this.getArtistInfo(event.performance[0].artist.displayName, token)
-                if (artistObj) {
-                    let dateStr = formatDate(event.start.datetime)
-                    console.log(dateStr)
-                    eventObj = {
-                        event: {
-                            link: event.uri,
-                            popularity: event.popularity,
-                            status: event.status,
-                            date: event.start.datetime,
-                            dateStr: dateStr,
-                            artist: event.performance[0].artist.displayName,
-                            venue: { name: event.venue.displayName, link: event.venue.uri },
-                            location: event.location.city,
-                        },
-                        artist: artistObj
+        if (!rawEvents) {
+            return null
+        }
+        else {
+            let events = []
+            for (let event of rawEvents) {
+                if (event.performance[0]) {
+                    artistObj = await this.getArtistInfo(event.performance[0].artist.displayName, token)
+                    if (artistObj) {
+                        let dateStr = formatDate(event.start.datetime)
+                        console.log(dateStr)
+                        eventObj = {
+                            event: {
+                                link: event.uri,
+                                popularity: event.popularity,
+                                status: event.status,
+                                date: event.start.datetime,
+                                dateStr: dateStr,
+                                artist: event.performance[0].artist.displayName,
+                                venue: { name: event.venue.displayName, link: event.venue.uri },
+                                location: event.location.city,
+                            },
+                            artist: artistObj
+                        }
+                        events.push(eventObj)
                     }
-                    events.push(eventObj)
                 }
             }
+            let eventsObj = { events: events }
+            return eventsObj
         }
-        let eventsObj = { events: events }
-        return eventsObj
+        //console.log(rawEvents)
     }
     catch (error) { console.log(error) }
 }

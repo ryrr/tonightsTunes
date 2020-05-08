@@ -41,17 +41,22 @@ app.post('/nearby', async (req, res) => {
             else {
                 console.log('cache miss')
                 let artistsResp = await logic.getNearbyArtists(locationResp, req.body.token, length)
-                let tracksResp = await logic.getTracks(artistsResp, req.body.token)
-                tracksResp['length'] = req.body.span
-                tracksResp['location'] = (locationObj.id).toString()
-                let success = await db.insert(tracksResp)
-                if (success) {
-                    console.log('upload success')
-                    res.send(tracksResp)
+                if (!artistsResp) {
+                    res.send({ events: [] })
                 }
                 else {
-                    console.log('upload failed')
-                    res.send({ err: 'upload failed' })
+                    let tracksResp = await logic.getTracks(artistsResp, req.body.token)
+                    tracksResp['length'] = req.body.span
+                    tracksResp['location'] = (locationObj.id).toString()
+                    let success = await db.insert(tracksResp)
+                    if (success) {
+                        console.log('upload success')
+                        res.send(tracksResp)
+                    }
+                    else {
+                        console.log('upload failed')
+                        res.send({ err: 'upload failed' })
+                    }
                 }
             }
         }
