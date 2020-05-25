@@ -183,13 +183,13 @@ let Input = (props) => {
     //HELPERS
 
     function formatDate(dateStr) {
-        console.log('original ' + dateStr)
-        //let blah = new Date(dateStr)
+
+        //console.log(dateStr)
         let blah = moment.utc(dateStr).toDate()
-        dateStr = moment(blah).local().format('YYYY-MM-DD HH:mm:ss');
+        dateStr = moment(blah).local().format('YYYY-MM-DD HH:mm:ss')
         let hours = moment(dateStr).hour();
         //dateStr = blah.toISOString()
-        console.log('formatted: ' + dateStr)
+        console.log('format fn: ' + dateStr)
         if (!dateStr || !hours) {
             console.log('invalid')
             return null

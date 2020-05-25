@@ -123,16 +123,25 @@ exports.getNearbyArtists = async (locationObj, token, length) => {
                     if (artistObj) {
                         let dateStr = formatDate(event.start.datetime)
                         let date2 = new Date(event.start.datetime)
+<<<<<<< HEAD
                         date2 = date2.toISOString()
                         console.log('date2:' + date2)
                         //console.log(dateStr)
+=======
+			date2 = date2.toISOString()
+			console.log('date2: '+date2)
+>>>>>>> ce8f0798c706b5dd6e42e2e5a0fa1c78601251c4
                         eventObj = {
                             event: {
                                 link: event.uri,
                                 popularity: event.popularity,
                                 status: event.status,
                                 date: event.start.datetime,
+<<<<<<< HEAD
                                 date2: date2,
+=======
+				date2 : date2,
+>>>>>>> ce8f0798c706b5dd6e42e2e5a0fa1c78601251c4
                                 dateStr: dateStr,
                                 artist: event.performance[0].artist.displayName,
                                 venue: { name: event.venue.displayName, link: event.venue.uri },
