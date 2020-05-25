@@ -6,6 +6,7 @@ import Autocomplete from "./Autocomplete";
 import Track from './Track.js'
 import Filters from './Filters'
 import Connect from './Connect.js'
+const moment = require('moment')
 
 let Input = (props) => {
     const [animation, setAnimation] = useState(null)
@@ -179,6 +180,28 @@ let Input = (props) => {
 
     //HELPERS
 
+    function formatDate(dateStr) {
+        //console.log(dateStr)
+        let blah = new Date(dateStr)
+        let hours = moment(dateStr).hour();
+        dateStr = blah.toISOString()
+        console.log(dateStr)
+        if (!dateStr || !hours) {
+            return null
+        }
+        else {
+            let minutes = moment(dateStr).minute();
+            let ampm = hours >= 12 ? 'pm' : 'am';
+            hours = hours % 12;
+            hours = hours ? hours : 12; // the hour '0' should be '12'
+            minutes = minutes < 10 ? '0' + minutes : minutes;
+            let strTime = hours + ':' + minutes + ' ' + ampm;
+            let thingy = moment(dateStr).month() + "/" + moment(dateStr).date() + " @ " + strTime
+            thingy = thingy.toString()
+            console.log(typeof thingy)
+            return thingy
+        }
+    }
 
     const millisToMinutesAndSeconds = millis => {
         var minutes = Math.floor(millis / 60000);
@@ -230,7 +253,7 @@ let Input = (props) => {
                         venue={obj.event.venue ? obj.event.venue['name'] : '?'}
                         venueLink={obj.event.venue ? obj.event.venue['link'] : '/'}
                         //date={obj.event.date ? formatDate(obj.event.date) : 'unknown date'}
-                        dateStr={obj.event.dateStr ? obj.event.dateStr : 'unknown date'}
+                        dateStr={formatDate(obj.event.dateStr) ? formatDate(obj.event.dateStr) : 'unknown date'}
                         location={obj.event.location}
                         primaryColor={rgbToHex(obj.track.colors[0][0], obj.track.colors[0][1], obj.track.colors[0][2])}
                         secondaryColor={rgbToHex(obj.track.colors[1][0], obj.track.colors[1][1], obj.track.colors[1][2])}

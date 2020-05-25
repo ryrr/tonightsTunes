@@ -82,10 +82,11 @@ function getDates(length) {
 }
 
 function formatDate(dateStr) {
-    console.log(dateStr)
+    //console.log(dateStr)
     let blah = new Date(dateStr)
     let hours = moment(dateStr).hour();
     dateStr = blah.toISOString()
+    console.log(dateStr)
     if (!dateStr || !hours) {
         return null
     }
@@ -121,7 +122,7 @@ exports.getNearbyArtists = async (locationObj, token, length) => {
                     artistObj = await this.getArtistInfo(event.performance[0].artist.displayName, token)
                     if (artistObj) {
                         let dateStr = formatDate(event.start.datetime)
-                        console.log(dateStr)
+                        //console.log(dateStr)
                         eventObj = {
                             event: {
                                 link: event.uri,
