@@ -182,10 +182,11 @@ let Input = (props) => {
 
     function formatDate(dateStr) {
         //console.log(dateStr)
-        let blah = new Date(dateStr)
+        let blah = moment.utc(dateStr).toDate()
+	dateStr = moment(blah).local().format('YYYY-MM-DD HH:mm:ss')
         let hours = moment(dateStr).hour();
-        dateStr = blah.toISOString()
-        console.log(dateStr)
+       //dateStr = blah.toISOString()
+        console.log('format fn: '+dateStr)
         if (!dateStr || !hours) {
             return null
         }
@@ -198,7 +199,7 @@ let Input = (props) => {
             let strTime = hours + ':' + minutes + ' ' + ampm;
             let thingy = moment(dateStr).month() + "/" + moment(dateStr).date() + " @ " + strTime
             thingy = thingy.toString()
-            console.log(typeof thingy)
+            console.log(thingy+'\n')
             return thingy
         }
     }
@@ -252,8 +253,8 @@ let Input = (props) => {
                         audio={obj.track.audio}
                         venue={obj.event.venue ? obj.event.venue['name'] : '?'}
                         venueLink={obj.event.venue ? obj.event.venue['link'] : '/'}
-                        //date={obj.event.date ? formatDate(obj.event.date) : 'unknown date'}
-                        dateStr={formatDate(obj.event.dateStr) ? formatDate(obj.event.dateStr) : 'unknown date'}
+                        date={obj.event.date ? formatDate(obj.event.date) : 'unknown date'}
+                        dateStr={formatDate(obj.event.date2) ? formatDate(obj.event.date2) : 'unknown date'}
                         location={obj.event.location}
                         primaryColor={rgbToHex(obj.track.colors[0][0], obj.track.colors[0][1], obj.track.colors[0][2])}
                         secondaryColor={rgbToHex(obj.track.colors[1][0], obj.track.colors[1][1], obj.track.colors[1][2])}
