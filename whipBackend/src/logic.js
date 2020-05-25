@@ -122,6 +122,9 @@ exports.getNearbyArtists = async (locationObj, token, length) => {
                     artistObj = await this.getArtistInfo(event.performance[0].artist.displayName, token)
                     if (artistObj) {
                         let dateStr = formatDate(event.start.datetime)
+                        let date2 = new Date(event.start.datetime)
+                        date2 = date2.toISOString()
+                        console.log('date2:' + date2)
                         //console.log(dateStr)
                         eventObj = {
                             event: {
@@ -129,6 +132,7 @@ exports.getNearbyArtists = async (locationObj, token, length) => {
                                 popularity: event.popularity,
                                 status: event.status,
                                 date: event.start.datetime,
+                                date2: date2,
                                 dateStr: dateStr,
                                 artist: event.performance[0].artist.displayName,
                                 venue: { name: event.venue.displayName, link: event.venue.uri },

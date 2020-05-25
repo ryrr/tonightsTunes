@@ -30,6 +30,12 @@
     font-size: 16px;
     text-align: center;
 }
+.subBttn{
+   padding: 0;
+   border: none;
+   background: none;
+   outline: none;
+}
 .pwrDiv{
     display: flex;
     justify-content: center;
@@ -127,6 +133,22 @@
     color:#63585E;
     margin-bottom: 10px;
     cursor: pointer;
+}
+.subIco{
+    color:#63585E;
+    cursor: pointer;
+}
+.xIco{
+    color:#C0C8E2;
+    margin-top: 15px;
+
+    cursor: pointer;
+    text-align: right;
+    width: 90%;
+}
+.xDivs{
+    display: flex;
+    width: 100%;
 }
 .settings{
     display: flex;

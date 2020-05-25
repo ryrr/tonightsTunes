@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { StyleSheet, css } from 'aphrodite';
 let Filters = (props) => {
     let [location, setLocation] = useState(null)
-    let [dropdown, setDropdown] = useState('null')
+    let [dropdown, setDropdown] = useState(props.def)
     useEffect(() => {
         setLocation(props.location)
     }, []);
@@ -114,6 +114,7 @@ let Filters = (props) => {
 
     })
 
+
     const handleClick = (e) => {
         let clicked = e.target.getAttribute('name')
         if (dropdown !== clicked) {
@@ -138,7 +139,7 @@ let Filters = (props) => {
     const shuffle = () => {
         props.shuffle(location)
     }
-    if (dropdown == 'settings') {
+    if (dropdown === 'settings') {
 
         return (
             <div className={css(styles.container)}>
@@ -174,7 +175,7 @@ let Filters = (props) => {
             </div>
         )
     }
-    else if (dropdown == 'info') {
+    else if (dropdown === 'info') {
         return (
             <div className={css(styles.container)}>
                 <div className={css(styles.iconDiv)}>
@@ -183,11 +184,15 @@ let Filters = (props) => {
                     <i className="fas fa-question-circle fa-2x settingsIco" name='info' onClick={handleClick}></i>
                 </div>
                 <div className={css(styles.settings)}>
+                    <div className='xDivs'>
+                        <i className="fas fa-times-circle fa-2x xIco" name='info' onClick={handleClick}></i>
+                    </div>
                     <h2 className={css(styles.howTo)}>INSTRUCTIONS</h2>
                     <ul className={css(styles.instList)}>
-                        <li className={css(styles.li)}>click <i className={css(styles.emphasis)}>right side</i> of track to toggle between event & track info</li>
-                        <li className={css(styles.li)}>click <i className={css(styles.emphasis)}>album art</i> to play a sample of the track</li>
-                        <li className={css(styles.li)}>connecting to spotify is strongly reccomended as it will allow you to save the playlist along with access to future features</li>
+                        <li className={css(styles.li)}><i className={css(styles.emphasis)}>right side</i> of track to toggle between event & track info</li>
+                        <li className={css(styles.li)}><i className={css(styles.emphasis)}>album art</i> to play a sample of the track</li>
+                        <li className={css(styles.li)}><i className={css(styles.emphasis)}>venue name</i> to visit event webpage</li>
+                        <li className={css(styles.li)}><i className={css(styles.emphasis)}>connecting</i> to spotify will allow you to save the playlist</li>
                     </ul>
                     <ul className={css(styles.extList)}>
                         <li>

@@ -22,6 +22,7 @@ let Input = (props) => {
     const [badLocation, setBadLocation] = useState(false)
     const [uris, setUris] = useState([])
     const [added, setAdded] = useState(false)
+    const [def, setDef] = useState('info')
 
     let locationSubmit = (e) => {
         e.preventDefault()
@@ -49,7 +50,7 @@ let Input = (props) => {
         };
         //167.172.138.71
         //localhost
-        fetch('http://167.172.138.71:2222/nearby', requestOptions)
+        fetch('http://localhost:2222/nearby', requestOptions)
             .then(response => response.json())
             .then(data => processData(data));
 
@@ -176,17 +177,21 @@ let Input = (props) => {
     const goBack = () => {
         setV(true)
         setSize(20)
+        setDef(null)
     }
 
     //HELPERS
 
     function formatDate(dateStr) {
-        //console.log(dateStr)
-        let blah = new Date(dateStr)
+        console.log('original ' + dateStr)
+        //let blah = new Date(dateStr)
+        let blah = moment.utc(dateStr).toDate()
+        dateStr = moment(blah).local().format('YYYY-MM-DD HH:mm:ss');
         let hours = moment(dateStr).hour();
-        dateStr = blah.toISOString()
-        console.log(dateStr)
+        //dateStr = blah.toISOString()
+        console.log('formatted: ' + dateStr)
         if (!dateStr || !hours) {
+            console.log('invalid')
             return null
         }
         else {
@@ -198,7 +203,7 @@ let Input = (props) => {
             let strTime = hours + ':' + minutes + ' ' + ampm;
             let thingy = moment(dateStr).month() + "/" + moment(dateStr).date() + " @ " + strTime
             thingy = thingy.toString()
-            console.log(typeof thingy)
+            console.log(thingy + '\n')
             return thingy
         }
     }
@@ -224,7 +229,6 @@ let Input = (props) => {
         }
         return a;
     }
-
     const classy = css(shouldMove() ? styles.bounceOutLeft : styles.nothing)
     const noTracks = () => {
         return (
@@ -252,8 +256,8 @@ let Input = (props) => {
                         audio={obj.track.audio}
                         venue={obj.event.venue ? obj.event.venue['name'] : '?'}
                         venueLink={obj.event.venue ? obj.event.venue['link'] : '/'}
-                        //date={obj.event.date ? formatDate(obj.event.date) : 'unknown date'}
-                        dateStr={formatDate(obj.event.dateStr) ? formatDate(obj.event.dateStr) : 'unknown date'}
+                        date={obj.event.date ? formatDate(obj.event.date) : 'unknown date'}
+                        dateStr={formatDate(obj.event.date2) ? formatDate(obj.event.date2) : 'unknown date'}
                         location={obj.event.location}
                         primaryColor={rgbToHex(obj.track.colors[0][0], obj.track.colors[0][1], obj.track.colors[0][2])}
                         secondaryColor={rgbToHex(obj.track.colors[1][0], obj.track.colors[1][1], obj.track.colors[1][2])}
@@ -278,6 +282,9 @@ let Input = (props) => {
                                 }
                             }
                         />
+                        <button type='submit' className='subBttn'>
+                            <i type='submit' class="fas fa-arrow-circle-right fa-2x subIco"></i>
+                        </button>
                         <h3 className={'locNotFound', css(styles.jello)}>{badLocation ? '🤔city not found, try again🤔' : null}</h3>
                     </form>
                 </div>
@@ -289,7 +296,7 @@ let Input = (props) => {
         return (
             <div className='trackContainer'>
                 <a className='playlistLink' href={added} target="_blank"><h3 className='added' >🎉 playlist added here 🎉</h3></a>
-                <Filters goBack={goBack} updateSize={updateSize} size={size} location={location} changeTime={changeTime} changeSort={changeSort} shuffle={fetchTracks}></Filters>
+                <Filters goBack={goBack} def={def} updateSize={updateSize} size={size} location={location} changeTime={changeTime} changeSort={changeSort} shuffle={fetchTracks}></Filters>
                 {tracks.length ? null : noTracks()}
                 {loading ? null : createTracks()}
             </div>
@@ -299,7 +306,7 @@ let Input = (props) => {
         return (
             <div className='trackContainer'>
                 {props.accessToken ? <Connect setAdded={(playLink) => { setAdded(playLink) }} uris={uris} token={props.accessToken}></Connect> : null}
-                <Filters goBack={goBack} updateSize={updateSize} size={size} location={location} changeTime={changeTime} changeSort={changeSort} shuffle={fetchTracks}></Filters>
+                <Filters goBack={goBack} def={def} updateSize={updateSize} size={size} location={location} changeTime={changeTime} changeSort={changeSort} shuffle={fetchTracks}></Filters>
                 {tracks.length ? null : noTracks()}
                 {loading ? null : createTracks()}
             </div>
