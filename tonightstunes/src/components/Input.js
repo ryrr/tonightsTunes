@@ -31,8 +31,8 @@ let Input = (props) => {
         setTimeout(function () {
             setAnimation(null)
         }, 900);
-        setLocation(e.target[0].value)
-        fetchTracks(e.target[0].value)
+        setLocation((e.target[0].value).trim())
+        fetchTracks((e.target[0].value).trim())
     }
 
     let fetchTracks = (location) => {

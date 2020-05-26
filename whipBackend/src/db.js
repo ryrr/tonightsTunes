@@ -22,6 +22,10 @@ exports.insert = async (item) => {
         return undefined
     }
 }
+exports.delete = async () => {
+    const db = client.db('whipcache')
+    db.collection('tracks').deleteMany({})
+}
 
 const entryExists = async (client, search) => {
     const db = client.db('whipcache')

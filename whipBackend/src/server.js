@@ -1,4 +1,5 @@
 const express = require("express"); // CommonJS import style!
+const cron = require('node-cron');
 const app = express(); // instantiate an Express object
 const bodyParser = require("body-parser");
 const logic = require('./logic.js')
@@ -62,6 +63,19 @@ app.post('/nearby', async (req, res) => {
     }
     catch (error) { console.log(error) }
 })
+
+//automated daily cache clean
+const cleanup = async () => {
+    await db.delete()
+    console.log('done')
+}
+
+cron.schedule('0 3 * * *', () => {
+    cleanup()
+}, {
+    scheduled: true,
+    timezone: 'America/New_York'
+});
 
 app.listen(2222, () => console.log('Server listening on port 2222'));
 
