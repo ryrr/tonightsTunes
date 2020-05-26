@@ -50,7 +50,7 @@ let Input = (props) => {
         };
         //167.172.138.71
         //localhost
-        fetch('http://localhost:2222/nearby', requestOptions)
+        fetch('http://167.172.138.71:2222/nearby', requestOptions)
             .then(response => response.json())
             .then(data => processData(data));
 
@@ -180,6 +180,11 @@ let Input = (props) => {
         setDef(null)
     }
 
+    const curDate = () => {
+        let date = moment().month() + "/" + moment().date()
+        return date
+    }
+
     //HELPERS
 
     function formatDate(dateStr) {
@@ -305,7 +310,7 @@ let Input = (props) => {
     else if (!loading) {
         return (
             <div className='trackContainer'>
-                {props.accessToken ? <Connect setAdded={(playLink) => { setAdded(playLink) }} uris={uris} token={props.accessToken}></Connect> : null}
+                {props.accessToken ? <Connect setAdded={(playLink) => { setAdded(playLink) }} location={location} date={curDate()} uris={uris} token={props.accessToken}></Connect> : null}
                 <Filters goBack={goBack} def={def} updateSize={updateSize} size={size} location={location} changeTime={changeTime} changeSort={changeSort} shuffle={fetchTracks}></Filters>
                 {tracks.length ? null : noTracks()}
                 {loading ? null : createTracks()}

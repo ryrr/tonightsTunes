@@ -25,7 +25,8 @@ let App = (props) => {
     }, []);
 
     let client_id = '2a1e4b30a72b41feb5c432aed9877ccb'
-    let redirect_uri = 'http%3A%2F%2F167.172.138.71%2F'
+    //let redirect_uri = 'http%3A%2F%2F167.172.138.71%2F'
+    let redirect_uri = 'http%3A%2F%2Ftonightstunes.xyz%2F'
     let scopes = 'playlist-modify-private'
     let link = `https://accounts.spotify.com/authorize?client_id=${client_id}&response_type=token&redirect_uri=${redirect_uri}&scope=${scopes}&show_dialog=true`
 
