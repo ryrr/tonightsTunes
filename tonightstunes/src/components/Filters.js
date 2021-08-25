@@ -36,7 +36,7 @@ let Filters = (props) => {
             alignItems: "center",
             fontFamily: 'Roboto',
             color: '#C0C8E2',
-            letterSpacing: '5px'
+            letterSpacing: '3px'
         },
         shuffle: {
             fontFamily: 'Roboto',
@@ -115,13 +115,14 @@ let Filters = (props) => {
     const handleClick = (e) => {
         let clicked = e.target.getAttribute('name')
         if (dropdown !== clicked) {
-            setOpened("0px")
-            setTimeout(function () {
-                setDropdown(clicked)
-                setOpened("500px")
-            }, 2500);
+            //setOpened("0px")
+           
+            setDropdown(clicked)
+            setOpened("500px")
+            
         }
         else {
+            
             setDropdown(clicked)
             if (opened === '0px') {
                 setOpened("500px")
@@ -151,13 +152,13 @@ let Filters = (props) => {
         return (
             <div className={css(styles.container)}>
                 <div className={css(styles.iconDiv)}>
-                    <i className="fas fa-sync-alt fa-2x settingsIco" onClick={shuffle}></i>
+                    <i className="fas fas fa-arrow-circle-left fa-2x settingsIco" name='info' onClick={props.goBack}></i>
                     <i className="fas fa-cog fa-2x settingsIco" name='settings' onClick={handleClick}></i>
-                    <i className="fas fa-question-circle fa-2x settingsIco" name='info' onClick={handleClick}></i>
+                    <i className="fas fa-sync-alt fa-2x settingsIco" onClick={shuffle}></i>
                 </div>
                 <div className={css(styles.settings)}>
                     <div className={css(styles.filter)}>
-                        <h2>sort by?</h2>
+                        <h2>sort by</h2>
                         <select onChange={changeSort} className={css(styles.select)}>
                             <option>nothing</option>
                             <option>popularity</option>
@@ -165,19 +166,19 @@ let Filters = (props) => {
                         </select>
                     </div>
                     <div className={css(styles.filter)}>
-                        <h2>when?</h2>
+                        <h2>when</h2>
                         <select onChange={changeTime} className={css(styles.select)}>
                             <option>tonight</option>
                             <option>this week</option>
                         </select>
                     </div>
                     <div className={css(styles.filter)}>
-                        <h2>how many?</h2>
+                        <h2>track count</h2>
                         <input className={css(styles.count)} placeholder={props.size} onChange={updateSize} onKeyDown={() => { return false }} type="number" min="1" max="50"></input>
                     </div>
-                    <div className='filterBttnDiv'>
-                        <button className='goBackBttn2' onClick={props.goBack}>go back</button>
-                        <button onClick={shuffle} className={css(styles.shuffle)}>apply filters</button>
+                    <div className='filterBttnDiv' style={{display:"flex",justifyContent:'center',fontSize:'15px'}}>
+                        
+                        <button onClick={shuffle} className={css(styles.shuffle)}>ok</button>
                     </div>
                 </div>
             </div>

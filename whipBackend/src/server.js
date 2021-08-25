@@ -41,7 +41,9 @@ app.post('/nearby', async (req, res) => {
             else {
                 console.log('cache miss')
                 let artistsResp = await logic.getNearbyArtists(locationResp, req.body.token, length)
+                console.log(artistsResp)
                 let tracksResp = await logic.getTracks(artistsResp, req.body.token)
+                console.log(tracksResp['events'][0])
                 tracksResp['length'] = req.body.span
                 tracksResp['location'] = (locationObj.id).toString()
                 let success = await db.insert(tracksResp)

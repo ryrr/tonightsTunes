@@ -17,6 +17,6 @@
         "tokenURL": "https://accounts.spotify.com/api/token"
     },
     "db": {
-        "uri": "mongodb://riprr:Magicpotato2@ds029811.mlab.com:29811/whipcache"
+        "uri":"mongodb+srv://ryan:3Longhorses@cluster1.b74ia.mongodb.net/whipcache?retryWrites=true&w=majority"
     }
 }
