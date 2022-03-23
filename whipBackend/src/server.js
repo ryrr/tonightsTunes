@@ -12,6 +12,11 @@ app.get('/token', async (req, res) => {
     const token = await logic.getToken();
     res.send(token);
 });
+const { MongoClient } = require('mongodb');
+const config = require("./config.json")
+const client = new MongoClient(config.db.uri, { useUnifiedTopology: true })
+client.connect();
+
 /*
 //RECOMMENDATIONS
 app.post("/search", async (req, res) => {
@@ -33,7 +38,7 @@ app.post('/nearby', async (req, res) => {
         }
         else {
             let locationObj = JSON.parse(locationResp)
-            let cachedResults = await db.check({ length: req.body.span, code: (locationObj.id).toString() })
+            let cachedResults = await db.check({ length: req.body.span, code: (locationObj.id).toString() },client)
             if (cachedResults) {
                 console.log('cache hit!')
                 res.send(cachedResults)
@@ -46,7 +51,7 @@ app.post('/nearby', async (req, res) => {
                 console.log(tracksResp['events'][0])
                 tracksResp['length'] = req.body.span
                 tracksResp['location'] = (locationObj.id).toString()
-                let success = await db.insert(tracksResp)
+                let success = await db.insert(tracksResp,client)
                 if (success) {
                     console.log('upload success')
                     res.send(tracksResp)

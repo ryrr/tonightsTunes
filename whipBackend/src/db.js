@@ -1,9 +1,4 @@
-const { MongoClient } = require('mongodb');
-const config = require("./config.json")
-const client = new MongoClient(config.db.uri, { useUnifiedTopology: true })
-client.connect();
-
-exports.check = async (search) => {
+exports.check = async (search,client) => {
     try {
         let res = await entryExists(client, search);
         return res
@@ -13,7 +8,7 @@ exports.check = async (search) => {
     }
 }
 
-exports.insert = async (item) => {
+exports.insert = async (item,client) => {
     try {
         let res = await insertItem(client, item);
         return res
@@ -35,6 +30,7 @@ const entryExists = async (client, search) => {
         console.log(err)
         return undefined
     }
+    return undefined
 }
 
 const insertItem = async (client, item) => {
